@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tFd-9z-nEI">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="NanumBarunpenB.ttf">
+            <string>NanumBarunpen-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--홈-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +22,198 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="Stadium" id="kbB-ZU-U1r">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.96078431372549022" green="0.23921568627450979" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1169" y="-581"/>
+        </scene>
+        <!--일정-->
+        <scene sceneID="gIv-5L-RDM">
+            <objects>
+                <viewController id="S2q-NN-ZcC" customClass="PlanViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Ti-xp-U74"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dik-4v-iat"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M2j-fv-4qe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="일정" image="Calendar" id="5Oq-Bj-69R">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.96078431372549022" green="0.23921568627450979" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPJ-Zb-bUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="758"/>
+        </scene>
+        <!--순위-->
+        <scene sceneID="BZL-dm-HlC">
+            <objects>
+                <viewController id="ujR-bn-9YR" customClass="RankViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EdF-oq-R3J"/>
+                        <viewControllerLayoutGuide type="bottom" id="boM-Xg-d4R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p2P-Qk-JU9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sja-0C-IUe">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="3LD-gE-sAv">
+                                    <rect key="frame" x="0.0" y="99" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LeagueCell" rowHeight="71" id="jSP-3R-FOb" customClass="LeagueCell" customModule="SoccerFanApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="71"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jSP-3R-FOb" id="9Ve-Mi-kBa">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="70.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프리미어리그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-1p-5Hg">
+                                                    <rect key="frame" x="22" y="19" width="224" height="34"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="224" id="4nH-Fd-yjz"/>
+                                                        <constraint firstAttribute="height" constant="34" id="bUG-Ue-NH1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="24"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="Imb-VG-w8H">
+                                                    <rect key="frame" x="534" y="23" width="25" height="25"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="GDx-J0-aiu"/>
+                                                        <constraint firstAttribute="width" constant="25" id="gXG-ZX-iPN"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="HeE-1p-5Hg" firstAttribute="centerY" secondItem="9Ve-Mi-kBa" secondAttribute="centerY" id="Ksj-cf-Ebj"/>
+                                                <constraint firstItem="HeE-1p-5Hg" firstAttribute="leading" secondItem="9Ve-Mi-kBa" secondAttribute="leadingMargin" constant="14" id="Tdl-Xi-lds"/>
+                                                <constraint firstItem="Imb-VG-w8H" firstAttribute="centerY" secondItem="9Ve-Mi-kBa" secondAttribute="centerY" id="aqB-dH-hma"/>
+                                                <constraint firstItem="HeE-1p-5Hg" firstAttribute="leading" secondItem="9Ve-Mi-kBa" secondAttribute="leadingMargin" id="co4-Ab-FZn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Imb-VG-w8H" secondAttribute="trailing" id="sDW-Tf-H85"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="co4-Ab-FZn"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="leagueLbl" destination="HeE-1p-5Hg" id="TcX-ZJ-rWq"/>
+                                            <outlet property="starImage" destination="Imb-VG-w8H" id="vWc-5Y-jLU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sja-0C-IUe" secondAttribute="trailing" constant="-20" id="T5Y-Le-dKh"/>
+                            <constraint firstItem="sja-0C-IUe" firstAttribute="top" secondItem="p2P-Qk-JU9" secondAttribute="topMargin" constant="20" id="cnI-p6-UWz"/>
+                            <constraint firstItem="sja-0C-IUe" firstAttribute="leading" secondItem="p2P-Qk-JU9" secondAttribute="leadingMargin" constant="-20" id="drA-xn-yBz"/>
+                            <constraint firstItem="boM-Xg-d4R" firstAttribute="top" secondItem="sja-0C-IUe" secondAttribute="bottom" id="wLv-0l-Asy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="순위" image="Rank" selectedImage="Rank" id="fd0-Xk-nUA">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.95977564102564106" green="0.32794185907425266" blue="0.29549577219158152" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="sja-0C-IUe" id="wNT-lr-hEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKd-MJ-jW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="85"/>
+        </scene>
+        <!--설정-->
+        <scene sceneID="V8u-3Z-pzM">
+            <objects>
+                <viewController id="Htt-ok-XcK" customClass="SettingViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CkN-v2-PD6"/>
+                        <viewControllerLayoutGuide type="bottom" id="z0n-HS-FoK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2vC-ri-NfM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="설정" image="Setting" id="2WC-OI-NBM">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.96078431372549022" green="0.23921568627450979" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaa-CK-jr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="1627"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EkU-mU-jfu">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tFd-9z-nEI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="IhU-w6-1LC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IFT-su-PTR"/>
+                        <segue destination="ujR-bn-9YR" kind="relationship" relationship="viewControllers" id="tHQ-46-lgL"/>
+                        <segue destination="S2q-NN-ZcC" kind="relationship" relationship="viewControllers" id="7s8-6u-Y3p"/>
+                        <segue destination="Htt-ok-XcK" kind="relationship" relationship="viewControllers" id="hkp-dy-cpJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2f-ns-xHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Calendar" width="24" height="24"/>
+        <image name="Rank" width="32" height="32"/>
+        <image name="Setting" width="24" height="24"/>
+        <image name="Stadium" width="32" height="32"/>
+        <image name="Star" width="256" height="256"/>
+    </resources>
 </document>
