@@ -9,6 +9,17 @@
         <mutableArray key="NanumBarunpenB.ttf">
             <string>NanumBarunpen-Bold</string>
             <string>NanumBarunpen-Bold</string>
+            <string>NanumBarunpen-Bold</string>
+            <string>NanumBarunpen-Bold</string>
+            <string>NanumBarunpen-Bold</string>
+            <string>NanumBarunpen-Bold</string>
+        </mutableArray>
+        <mutableArray key="NanumBarunpenR.ttf">
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -23,8 +34,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZs-ex-CwK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyT-dZ-Q4y">
+                                        <rect key="frame" x="210" y="21" width="181" height="36"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="NwD-De-cdc"/>
+                                            <constraint firstAttribute="width" constant="181" id="mFx-Yx-igC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qyT-dZ-Q4y" firstAttribute="top" secondItem="LZs-ex-CwK" secondAttribute="top" constant="21" id="LFu-Rx-JdX"/>
+                                    <constraint firstItem="qyT-dZ-Q4y" firstAttribute="centerX" secondItem="LZs-ex-CwK" secondAttribute="centerX" id="UqV-fY-0cU"/>
+                                    <constraint firstItem="qyT-dZ-Q4y" firstAttribute="top" secondItem="LZs-ex-CwK" secondAttribute="top" constant="21" id="Xfc-TJ-84v"/>
+                                    <constraint firstAttribute="height" constant="68" id="Z7B-rw-hVu"/>
+                                    <constraint firstItem="qyT-dZ-Q4y" firstAttribute="centerX" secondItem="LZs-ex-CwK" secondAttribute="centerX" id="qmg-Qt-UbK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LFu-Rx-JdX"/>
+                                        <exclude reference="qmg-Qt-UbK"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LZs-ex-CwK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="8w9-6q-NzP"/>
+                            <constraint firstItem="LZs-ex-CwK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="h1Z-iA-kkh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LZs-ex-CwK" secondAttribute="trailing" constant="-20" id="q5g-1x-kHE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="Stadium" id="kbB-ZU-U1r">
                         <userDefinedRuntimeAttributes>
@@ -49,8 +98,46 @@
                     <view key="view" contentMode="scaleToFill" id="M2j-fv-4qe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4F-iU-1Wm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경기 일정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEm-mJ-cAr">
+                                        <rect key="frame" x="210" y="21" width="181" height="36"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="BP7-eS-Jxd"/>
+                                            <constraint firstAttribute="width" constant="181" id="F4l-B0-no1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="61u-Z6-7jN"/>
+                                    <constraint firstItem="dEm-mJ-cAr" firstAttribute="centerX" secondItem="c4F-iU-1Wm" secondAttribute="centerX" id="839-9C-eeq"/>
+                                    <constraint firstItem="dEm-mJ-cAr" firstAttribute="centerX" secondItem="c4F-iU-1Wm" secondAttribute="centerX" id="CF1-tb-tVW"/>
+                                    <constraint firstItem="dEm-mJ-cAr" firstAttribute="top" secondItem="c4F-iU-1Wm" secondAttribute="top" constant="21" id="i2j-VN-3uf"/>
+                                    <constraint firstItem="dEm-mJ-cAr" firstAttribute="top" secondItem="c4F-iU-1Wm" secondAttribute="top" constant="21" id="wfQ-o9-YF9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wfQ-o9-YF9"/>
+                                        <exclude reference="CF1-tb-tVW"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="c4F-iU-1Wm" secondAttribute="trailing" constant="-20" id="I5C-FS-sWL"/>
+                            <constraint firstItem="c4F-iU-1Wm" firstAttribute="leading" secondItem="M2j-fv-4qe" secondAttribute="leadingMargin" constant="-20" id="VS6-vA-O6P"/>
+                            <constraint firstItem="c4F-iU-1Wm" firstAttribute="top" secondItem="M2j-fv-4qe" secondAttribute="topMargin" id="s6V-5f-9xC"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="일정" image="Calendar" id="5Oq-Bj-69R">
                         <userDefinedRuntimeAttributes>
@@ -63,6 +150,217 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPJ-Zb-bUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1169" y="758"/>
+        </scene>
+        <!--설정-->
+        <scene sceneID="GdI-wN-Mcz">
+            <objects>
+                <tableViewController id="DJQ-jL-4vs" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="52" sectionHeaderHeight="18" sectionFooterHeight="18" id="fhE-2n-Db7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="fHC-mS-x2c">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAL-07-sY7">
+                                    <rect key="frame" x="210" y="21" width="181" height="36"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="181" id="Bjb-fT-zQo"/>
+                                        <constraint firstAttribute="height" constant="36" id="L10-52-pAE"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="21"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="OAL-07-sY7" firstAttribute="centerX" secondItem="fHC-mS-x2c" secondAttribute="centerX" id="8Dv-9M-L7B"/>
+                                <constraint firstItem="OAL-07-sY7" firstAttribute="top" secondItem="fHC-mS-x2c" secondAttribute="top" constant="21" id="AQn-Db-JYQ"/>
+                                <constraint firstItem="OAL-07-sY7" firstAttribute="top" secondItem="fHC-mS-x2c" secondAttribute="top" constant="21" id="AQo-Mr-eJa"/>
+                                <constraint firstAttribute="height" constant="68" id="JlI-DS-4p5"/>
+                                <constraint firstItem="OAL-07-sY7" firstAttribute="centerX" secondItem="fHC-mS-x2c" secondAttribute="centerX" id="rj3-wc-cIH"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="AQn-Db-JYQ"/>
+                                    <exclude reference="8Dv-9M-L7B"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="응원팀" id="ASm-j1-gB8">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="oR2-2E-eZ3">
+                                        <rect key="frame" x="0.0" y="117.5" width="600" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oR2-2E-eZ3" id="dTo-KK-0pE">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맨체스터 유나이티드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Jj-AEb">
+                                                    <rect key="frame" x="27" y="9" width="183" height="35"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="3rf-ho-CJk"/>
+                                                        <constraint firstAttribute="width" constant="183" id="wCf-Bd-l0z"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="lMe-Jj-AEb" firstAttribute="centerY" secondItem="dTo-KK-0pE" secondAttribute="centerY" id="TG9-bs-mXQ"/>
+                                                <constraint firstItem="lMe-Jj-AEb" firstAttribute="leading" secondItem="dTo-KK-0pE" secondAttribute="leadingMargin" constant="19" id="kWj-pB-0R8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="알림" id="Ngh-WM-wzf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rkZ-wQ-fXl">
+                                        <rect key="frame" x="0.0" y="219.5" width="600" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rkZ-wQ-fXl" id="HOe-Sc-w3H">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="응원팀 경기 알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ2-Vu-lqG">
+                                                    <rect key="frame" x="27" y="8" width="183" height="35"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="183" id="2Xt-vt-3So"/>
+                                                        <constraint firstAttribute="height" constant="35" id="kmA-l0-Xvq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYI-oq-0RD">
+                                                    <rect key="frame" x="528" y="11" width="51" height="31"/>
+                                                    <animations/>
+                                                </switch>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="RYI-oq-0RD" firstAttribute="centerY" secondItem="HOe-Sc-w3H" secondAttribute="centerY" id="CZi-eL-h6Y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RYI-oq-0RD" secondAttribute="trailing" constant="15" id="E1Y-SH-TS6"/>
+                                                <constraint firstItem="oZ2-Vu-lqG" firstAttribute="leading" secondItem="HOe-Sc-w3H" secondAttribute="leadingMargin" constant="19" id="LQB-Cz-FWr"/>
+                                                <constraint firstItem="oZ2-Vu-lqG" firstAttribute="centerY" secondItem="HOe-Sc-w3H" secondAttribute="centerY" id="a07-3y-C1J"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="정보" id="Tfb-HT-rBG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LIO-aa-QC3">
+                                        <rect key="frame" x="0.0" y="321.5" width="600" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LIO-aa-QC3" id="XVV-mo-TmQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v 1.0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGB-S7-ZMM">
+                                                    <rect key="frame" x="448" y="9" width="128" height="35"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="128" id="BHf-l0-XIb"/>
+                                                        <constraint firstAttribute="width" constant="183" id="I3w-GI-h3c"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="JtC-kx-Mqb"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="OtC-GW-wYJ"/>
+                                                        <constraint firstAttribute="height" constant="35" id="oDp-Zc-Fxw"/>
+                                                        <constraint firstAttribute="height" constant="35" id="oXi-cZ-GQX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="I3w-GI-h3c"/>
+                                                            <exclude reference="JtC-kx-Mqb"/>
+                                                            <exclude reference="OtC-GW-wYJ"/>
+                                                            <exclude reference="oDp-Zc-Fxw"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버전 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzN-jV-Lrm">
+                                                    <rect key="frame" x="27" y="9" width="183" height="35"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="8Ge-uB-Sac"/>
+                                                        <constraint firstAttribute="width" constant="183" id="U5m-AR-Bd7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="SGB-S7-ZMM" firstAttribute="centerY" secondItem="XVV-mo-TmQ" secondAttribute="centerY" id="1KG-TW-4hg"/>
+                                                <constraint firstItem="MzN-jV-Lrm" firstAttribute="centerY" secondItem="XVV-mo-TmQ" secondAttribute="centerY" id="3CU-02-dYy"/>
+                                                <constraint firstItem="MzN-jV-Lrm" firstAttribute="leading" secondItem="XVV-mo-TmQ" secondAttribute="leadingMargin" constant="19" id="fD4-ei-1Bc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SGB-S7-ZMM" secondAttribute="trailing" constant="16" id="jXN-Sk-AvQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="C1e-sA-cCd">
+                                        <rect key="frame" x="0.0" y="373.5" width="600" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C1e-sA-cCd" id="Wit-t7-YRn">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개발자에게 메일 보내기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmj-yF-l9G">
+                                                    <rect key="frame" x="27" y="9" width="183" height="35"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="84O-bH-73t"/>
+                                                        <constraint firstAttribute="width" constant="183" id="XRJ-4y-6mU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="Rmj-yF-l9G" firstAttribute="leading" secondItem="Wit-t7-YRn" secondAttribute="leadingMargin" constant="19" id="YlX-xH-Kif"/>
+                                                <constraint firstItem="Rmj-yF-l9G" firstAttribute="centerY" secondItem="Wit-t7-YRn" secondAttribute="centerY" id="ZmK-1S-Cjt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="DJQ-jL-4vs" id="jkj-sr-q2d"/>
+                            <outlet property="delegate" destination="DJQ-jL-4vs" id="Pxf-g8-VRQ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="설정" image="Setting" selectedImage="Setting" id="hTk-WM-cZl">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.96078431372549022" green="0.23921568627450979" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5A-yu-q1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="1617"/>
         </scene>
         <!--순위-->
         <scene sceneID="BZL-dm-HlC">
@@ -77,7 +375,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sja-0C-IUe">
-                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <rect key="frame" x="0.0" y="68" width="600" height="483"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Z3N-g5-nGi">
@@ -101,7 +399,7 @@
                                                         <constraint firstAttribute="width" constant="224" id="4nH-Fd-yjz"/>
                                                         <constraint firstAttribute="height" constant="34" id="bUG-Ue-NH1"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -137,15 +435,61 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKh-be-kBc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리그 순위" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjE-Ub-Svv">
+                                        <rect key="frame" x="210" y="21" width="181" height="36"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="181" id="ATO-7B-F3X"/>
+                                            <constraint firstAttribute="height" constant="36" id="v8D-pB-tWX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rjE-Ub-Svv" firstAttribute="centerX" secondItem="dKh-be-kBc" secondAttribute="centerX" id="60M-tO-Hcs"/>
+                                    <constraint firstItem="rjE-Ub-Svv" firstAttribute="top" secondItem="dKh-be-kBc" secondAttribute="top" constant="21" id="8bI-oA-xdz"/>
+                                    <constraint firstItem="rjE-Ub-Svv" firstAttribute="top" secondItem="dKh-be-kBc" secondAttribute="top" constant="21" id="GaN-tw-dr6"/>
+                                    <constraint firstItem="rjE-Ub-Svv" firstAttribute="centerX" secondItem="dKh-be-kBc" secondAttribute="centerX" id="pF0-W8-rgf"/>
+                                    <constraint firstAttribute="height" constant="68" id="yw8-TK-RU3"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GaN-tw-dr6"/>
+                                        <exclude reference="pF0-W8-rgf"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dKh-be-kBc" firstAttribute="leading" secondItem="p2P-Qk-JU9" secondAttribute="leadingMargin" constant="-20" id="6qc-ID-tH6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sja-0C-IUe" secondAttribute="trailing" constant="-20" id="T5Y-Le-dKh"/>
-                            <constraint firstItem="sja-0C-IUe" firstAttribute="top" secondItem="p2P-Qk-JU9" secondAttribute="topMargin" constant="20" id="cnI-p6-UWz"/>
+                            <constraint firstItem="dKh-be-kBc" firstAttribute="top" secondItem="p2P-Qk-JU9" secondAttribute="topMargin" id="UVP-RD-bio"/>
+                            <constraint firstItem="sja-0C-IUe" firstAttribute="top" secondItem="p2P-Qk-JU9" secondAttribute="topMargin" constant="65" id="cnI-p6-UWz"/>
                             <constraint firstItem="sja-0C-IUe" firstAttribute="leading" secondItem="p2P-Qk-JU9" secondAttribute="leadingMargin" constant="-20" id="drA-xn-yBz"/>
+                            <constraint firstItem="boM-Xg-d4R" firstAttribute="top" secondItem="sja-0C-IUe" secondAttribute="bottom" id="dzu-Td-l4i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sja-0C-IUe" secondAttribute="trailing" constant="-20" id="fAs-w2-Ipg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dKh-be-kBc" secondAttribute="trailing" constant="-20" id="fhb-8q-vsC"/>
+                            <constraint firstItem="sja-0C-IUe" firstAttribute="top" secondItem="dKh-be-kBc" secondAttribute="bottom" id="vrM-xh-AnT"/>
                             <constraint firstItem="boM-Xg-d4R" firstAttribute="top" secondItem="sja-0C-IUe" secondAttribute="bottom" id="wLv-0l-Asy"/>
+                            <constraint firstItem="sja-0C-IUe" firstAttribute="leading" secondItem="p2P-Qk-JU9" secondAttribute="leadingMargin" constant="-20" id="xFd-Gt-bs4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="T5Y-Le-dKh"/>
+                                <exclude reference="cnI-p6-UWz"/>
+                                <exclude reference="drA-xn-yBz"/>
+                                <exclude reference="wLv-0l-Asy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="순위" image="Rank" selectedImage="Rank" id="fd0-Xk-nUA">
                         <userDefinedRuntimeAttributes>
@@ -161,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKd-MJ-jW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="85"/>
+            <point key="canvasLocation" x="1148" y="85"/>
         </scene>
         <!--Rank Detail View Controller-->
         <scene sceneID="HAY-3E-dNL">
@@ -252,32 +596,6 @@
             </objects>
             <point key="canvasLocation" x="1891" y="85"/>
         </scene>
-        <!--설정-->
-        <scene sceneID="V8u-3Z-pzM">
-            <objects>
-                <viewController id="Htt-ok-XcK" customClass="SettingViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CkN-v2-PD6"/>
-                        <viewControllerLayoutGuide type="bottom" id="z0n-HS-FoK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2vC-ri-NfM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="설정" image="Setting" id="2WC-OI-NBM">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.96078431372549022" green="0.23921568627450979" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zaa-CK-jr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1169" y="1627"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EkU-mU-jfu">
             <objects>
@@ -292,7 +610,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IFT-su-PTR"/>
                         <segue destination="ujR-bn-9YR" kind="relationship" relationship="viewControllers" id="tHQ-46-lgL"/>
                         <segue destination="S2q-NN-ZcC" kind="relationship" relationship="viewControllers" id="7s8-6u-Y3p"/>
-                        <segue destination="Htt-ok-XcK" kind="relationship" relationship="viewControllers" id="hkp-dy-cpJ"/>
+                        <segue destination="DJQ-jL-4vs" kind="relationship" relationship="viewControllers" id="kiG-QP-B7P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2f-ns-xHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
