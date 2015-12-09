@@ -8,6 +8,7 @@
     <customFonts key="customFonts">
         <mutableArray key="NanumBarunpenB.ttf">
             <string>NanumBarunpen-Bold</string>
+            <string>NanumBarunpen-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -79,7 +80,7 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="3LD-gE-sAv">
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Z3N-g5-nGi">
                                     <rect key="frame" x="0.0" y="99" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <animations/>
@@ -155,11 +156,101 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="sja-0C-IUe" id="wNT-lr-hEU"/>
+                        <segue destination="GCe-JD-CfM" kind="showDetail" identifier="LeagueSegue" id="Wie-gk-6Qh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKd-MJ-jW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1169" y="85"/>
+        </scene>
+        <!--Rank Detail View Controller-->
+        <scene sceneID="HAY-3E-dNL">
+            <objects>
+                <viewController id="GCe-JD-CfM" customClass="RankDetailViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sOo-tw-anf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ezc-3c-Cf7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LLb-ip-eKW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxc-gx-Vwj">
+                                <rect key="frame" x="0.0" y="-56" width="600" height="656"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Djn-fO-hev">
+                                        <rect key="frame" x="0.0" y="654" width="600" height="2"/>
+                                        <animations/>
+                                    </progressView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Djn-fO-hev" firstAttribute="leading" secondItem="gxc-gx-Vwj" secondAttribute="leading" id="8ka-Gb-KK7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Djn-fO-hev" secondAttribute="trailing" id="AUm-Lm-4ZP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Djn-fO-hev" secondAttribute="bottom" id="To3-Ws-4ar"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5S-wc-KeQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프리미어리그(ENG)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vG-pV-tDE">
+                                        <rect key="frame" x="210" y="21" width="181" height="36"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="181" id="Qzy-ZP-i8D"/>
+                                            <constraint firstAttribute="height" constant="36" id="Vbz-TZ-YRK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUF-IM-w4v">
+                                        <rect key="frame" x="21" y="26" width="25" height="25"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="Wbz-ib-n53"/>
+                                            <constraint firstAttribute="width" constant="25" id="g1t-l8-lXL"/>
+                                        </constraints>
+                                        <state key="normal" image="Back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="GCe-JD-CfM" eventType="touchUpInside" id="zJg-k6-bbm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.44831326162814999" green="0.80022035256410251" blue="0.17137191365053167" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cUF-IM-w4v" firstAttribute="top" secondItem="e5S-wc-KeQ" secondAttribute="top" constant="26" id="GGa-f0-csB"/>
+                                    <constraint firstAttribute="height" constant="68" id="McU-VO-kAd"/>
+                                    <constraint firstItem="8vG-pV-tDE" firstAttribute="centerX" secondItem="e5S-wc-KeQ" secondAttribute="centerX" id="rPn-gy-lqk"/>
+                                    <constraint firstItem="cUF-IM-w4v" firstAttribute="leading" secondItem="e5S-wc-KeQ" secondAttribute="leading" constant="21" id="vp0-0T-kEk"/>
+                                    <constraint firstItem="8vG-pV-tDE" firstAttribute="top" secondItem="e5S-wc-KeQ" secondAttribute="top" constant="21" id="xbY-MT-pPc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gxc-gx-Vwj" secondAttribute="trailing" id="27s-hY-usM"/>
+                            <constraint firstItem="e5S-wc-KeQ" firstAttribute="leading" secondItem="LLb-ip-eKW" secondAttribute="leadingMargin" constant="-20" id="C3y-AN-xKN"/>
+                            <constraint firstItem="gxc-gx-Vwj" firstAttribute="top" secondItem="e5S-wc-KeQ" secondAttribute="bottom" constant="-124" id="DU7-Ft-gVU"/>
+                            <constraint firstItem="e5S-wc-KeQ" firstAttribute="top" secondItem="LLb-ip-eKW" secondAttribute="topMargin" id="Dah-cg-M5j"/>
+                            <constraint firstItem="gxc-gx-Vwj" firstAttribute="leading" secondItem="LLb-ip-eKW" secondAttribute="leading" id="e2r-UD-1A3"/>
+                            <constraint firstItem="ezc-3c-Cf7" firstAttribute="top" secondItem="gxc-gx-Vwj" secondAttribute="bottom" id="lul-kL-eas"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e5S-wc-KeQ" secondAttribute="trailing" constant="-20" id="xOu-t2-toi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="k6u-CF-Z9r"/>
+                    <connections>
+                        <outlet property="LeagueLbl" destination="8vG-pV-tDE" id="hxy-z2-oKK"/>
+                        <outlet property="container" destination="gxc-gx-Vwj" id="h1t-Nm-JXc"/>
+                        <outlet property="progressBar" destination="Djn-fO-hev" id="AG3-GK-RTh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hh5-RD-Rxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="85"/>
         </scene>
         <!--설정-->
         <scene sceneID="V8u-3Z-pzM">
@@ -210,6 +301,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back" width="128" height="128"/>
         <image name="Calendar" width="24" height="24"/>
         <image name="Rank" width="32" height="32"/>
         <image name="Setting" width="24" height="24"/>
