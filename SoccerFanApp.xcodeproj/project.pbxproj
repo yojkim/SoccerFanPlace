@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1538FBC10DD77A352EE903FB /* Pods_SoccerFanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F8461595FFB2E7A5E1AF0F /* Pods_SoccerFanApp.framework */; };
+		A601C7C11C19F4BB0041C0C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601C7C01C19F4BB0041C0C3 /* Constants.swift */; };
 		A64041791C173116003D06B4 /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64041781C173116003D06B4 /* LeagueCell.swift */; };
 		A640417B1C179247003D06B4 /* RankDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640417A1C179247003D06B4 /* RankDetailViewController.swift */; };
 		A640417D1C179A2E003D06B4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640417C1C179A2E003D06B4 /* TransitionManager.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		66F8461595FFB2E7A5E1AF0F /* Pods_SoccerFanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerFanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1BDFC6B5DC15DB640D4070 /* Pods-SoccerFanApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerFanApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerFanApp/Pods-SoccerFanApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A601C7C01C19F4BB0041C0C3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A64041781C173116003D06B4 /* LeagueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
 		A640417A1C179247003D06B4 /* RankDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankDetailViewController.swift; sourceTree = "<group>"; };
 		A640417C1C179A2E003D06B4 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A601C7BF1C19F4AC0041C0C3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A601C7C01C19F4BB0041C0C3 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		A6FBAFAF1C16C09A007735A3 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 				A6FBAFCF1C16C31E007735A3 /* Model */,
 				A6FBAFCE1C16C315007735A3 /* View */,
 				A6FBAFCD1C16C30C007735A3 /* Controller */,
+				A601C7BF1C19F4AC0041C0C3 /* Util */,
 				A6FBAFD01C16C33C007735A3 /* Resource */,
 			);
 			path = SoccerFanApp;
@@ -277,6 +288,7 @@
 				A64041831C17A28B003D06B4 /* RankViewController.swift in Sources */,
 				A6FBAFBC1C16C09A007735A3 /* AppDelegate.swift in Sources */,
 				A6FBAFE01C170EED007735A3 /* PlanViewController.swift in Sources */,
+				A601C7C11C19F4BB0041C0C3 /* Constants.swift in Sources */,
 				A6FFEAC91C18A08600BCA739 /* TeamSelectViewController.swift in Sources */,
 				A6FBAFDC1C170EDC007735A3 /* MainViewController.swift in Sources */,
 				A64041791C173116003D06B4 /* LeagueCell.swift in Sources */,

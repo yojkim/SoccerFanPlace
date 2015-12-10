@@ -22,7 +22,6 @@ class RankDetailViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("asdf")
         // loaded by RankViewController
         self.LeagueLbl.text = self.LeagueName
         

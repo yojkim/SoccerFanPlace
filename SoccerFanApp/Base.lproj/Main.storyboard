@@ -179,6 +179,7 @@
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
+                                    <exclude reference="JlI-DS-4p5"/>
                                     <exclude reference="8Dv-9M-L7B"/>
                                     <exclude reference="AQn-Db-JYQ"/>
                                 </mask>
@@ -336,6 +337,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <connections>
+                        <outlet property="navigationView" destination="fHC-mS-x2c" id="8GH-qA-cDo"/>
                         <outlet property="notiSwitch" destination="RYI-oq-0RD" id="4it-hK-eM9"/>
                         <segue destination="NyU-dF-os8" kind="show" identifier="SelectSegue" id="Aoh-we-bia"/>
                     </connections>
@@ -679,7 +681,7 @@
         <image name="Back" width="128" height="128"/>
         <image name="Calendar" width="24" height="24"/>
         <image name="Rank" width="32" height="32"/>
-        <image name="Setting" width="24" height="24"/>
+        <image name="Setting" width="32" height="32"/>
         <image name="Stadium" width="32" height="32"/>
         <image name="Star" width="256" height="256"/>
     </resources>
