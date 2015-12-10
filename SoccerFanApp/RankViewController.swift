@@ -57,8 +57,8 @@ class RankViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         self.performSegueWithIdentifier("LeagueSegue", sender: nil)
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
     

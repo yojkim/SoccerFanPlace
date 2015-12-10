@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tFd-9z-nEI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tFd-9z-nEI">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="NanumBarunpenB.ttf">
+            <string>NanumBarunpen-Bold</string>
             <string>NanumBarunpen-Bold</string>
             <string>NanumBarunpen-Bold</string>
             <string>NanumBarunpen-Bold</string>
@@ -40,7 +41,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyT-dZ-Q4y">
                                         <rect key="frame" x="210" y="21" width="181" height="36"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="NwD-De-cdc"/>
                                             <constraint firstAttribute="width" constant="181" id="mFx-Yx-igC"/>
@@ -50,7 +50,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="qyT-dZ-Q4y" firstAttribute="top" secondItem="LZs-ex-CwK" secondAttribute="top" constant="21" id="LFu-Rx-JdX"/>
@@ -67,7 +66,6 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LZs-ex-CwK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="8w9-6q-NzP"/>
@@ -104,7 +102,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경기 일정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEm-mJ-cAr">
                                         <rect key="frame" x="210" y="21" width="181" height="36"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="BP7-eS-Jxd"/>
                                             <constraint firstAttribute="width" constant="181" id="F4l-B0-no1"/>
@@ -114,7 +111,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="61u-Z6-7jN"/>
@@ -125,13 +121,12 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="wfQ-o9-YF9"/>
                                         <exclude reference="CF1-tb-tVW"/>
+                                        <exclude reference="wfQ-o9-YF9"/>
                                     </mask>
                                 </variation>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="c4F-iU-1Wm" secondAttribute="trailing" constant="-20" id="I5C-FS-sWL"/>
@@ -149,24 +144,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPJ-Zb-bUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="758"/>
+            <point key="canvasLocation" x="1169" y="755"/>
         </scene>
         <!--설정-->
         <scene sceneID="GdI-wN-Mcz">
             <objects>
-                <tableViewController id="DJQ-jL-4vs" sceneMemberID="viewController">
+                <tableViewController id="DJQ-jL-4vs" customClass="SettingViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="52" sectionHeaderHeight="18" sectionFooterHeight="18" id="fhE-2n-Db7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="fHC-mS-x2c">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAL-07-sY7">
                                     <rect key="frame" x="210" y="21" width="181" height="36"/>
-                                    <animations/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="181" id="Bjb-fT-zQo"/>
                                         <constraint firstAttribute="height" constant="36" id="L10-52-pAE"/>
@@ -176,7 +169,6 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <animations/>
                             <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="OAL-07-sY7" firstAttribute="centerX" secondItem="fHC-mS-x2c" secondAttribute="centerX" id="8Dv-9M-L7B"/>
@@ -187,8 +179,8 @@
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="AQn-Db-JYQ"/>
                                     <exclude reference="8Dv-9M-L7B"/>
+                                    <exclude reference="AQn-Db-JYQ"/>
                                 </mask>
                             </variation>
                         </view>
@@ -204,23 +196,20 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맨체스터 유나이티드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Jj-AEb">
                                                     <rect key="frame" x="27" y="9" width="183" height="35"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="3rf-ho-CJk"/>
                                                         <constraint firstAttribute="width" constant="183" id="wCf-Bd-l0z"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="lMe-Jj-AEb" firstAttribute="centerY" secondItem="dTo-KK-0pE" secondAttribute="centerY" id="TG9-bs-mXQ"/>
                                                 <constraint firstItem="lMe-Jj-AEb" firstAttribute="leading" secondItem="dTo-KK-0pE" secondAttribute="leadingMargin" constant="19" id="kWj-pB-0R8"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -235,21 +224,18 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="응원팀 경기 알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ2-Vu-lqG">
                                                     <rect key="frame" x="27" y="8" width="183" height="35"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="183" id="2Xt-vt-3So"/>
                                                         <constraint firstAttribute="height" constant="35" id="kmA-l0-Xvq"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYI-oq-0RD">
                                                     <rect key="frame" x="528" y="11" width="51" height="31"/>
-                                                    <animations/>
                                                 </switch>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="RYI-oq-0RD" firstAttribute="centerY" secondItem="HOe-Sc-w3H" secondAttribute="centerY" id="CZi-eL-h6Y"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="RYI-oq-0RD" secondAttribute="trailing" constant="15" id="E1Y-SH-TS6"/>
@@ -257,7 +243,6 @@
                                                 <constraint firstItem="oZ2-Vu-lqG" firstAttribute="centerY" secondItem="HOe-Sc-w3H" secondAttribute="centerY" id="a07-3y-C1J"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -272,7 +257,6 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v 1.0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGB-S7-ZMM">
                                                     <rect key="frame" x="448" y="9" width="128" height="35"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="128" id="BHf-l0-XIb"/>
                                                         <constraint firstAttribute="width" constant="183" id="I3w-GI-h3c"/>
@@ -282,7 +266,7 @@
                                                         <constraint firstAttribute="height" constant="35" id="oXi-cZ-GQX"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -295,17 +279,15 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버전 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzN-jV-Lrm">
                                                     <rect key="frame" x="27" y="9" width="183" height="35"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="8Ge-uB-Sac"/>
                                                         <constraint firstAttribute="width" constant="183" id="U5m-AR-Bd7"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="SGB-S7-ZMM" firstAttribute="centerY" secondItem="XVV-mo-TmQ" secondAttribute="centerY" id="1KG-TW-4hg"/>
                                                 <constraint firstItem="MzN-jV-Lrm" firstAttribute="centerY" secondItem="XVV-mo-TmQ" secondAttribute="centerY" id="3CU-02-dYy"/>
@@ -313,7 +295,6 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="SGB-S7-ZMM" secondAttribute="trailing" constant="16" id="jXN-Sk-AvQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="C1e-sA-cCd">
                                         <rect key="frame" x="0.0" y="373.5" width="600" height="52"/>
@@ -324,23 +305,20 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개발자에게 메일 보내기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmj-yF-l9G">
                                                     <rect key="frame" x="27" y="9" width="183" height="35"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="84O-bH-73t"/>
                                                         <constraint firstAttribute="width" constant="183" id="XRJ-4y-6mU"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="Rmj-yF-l9G" firstAttribute="leading" secondItem="Wit-t7-YRn" secondAttribute="leadingMargin" constant="19" id="YlX-xH-Kif"/>
                                                 <constraint firstItem="Rmj-yF-l9G" firstAttribute="centerY" secondItem="Wit-t7-YRn" secondAttribute="centerY" id="ZmK-1S-Cjt"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -357,10 +335,105 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="notiSwitch" destination="RYI-oq-0RD" id="4it-hK-eM9"/>
+                        <segue destination="NyU-dF-os8" kind="show" identifier="SelectSegue" id="Aoh-we-bia"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5A-yu-q1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1169" y="1617"/>
+        </scene>
+        <!--Team Select View Controller-->
+        <scene sceneID="g5N-3o-ulP">
+            <objects>
+                <viewController id="NyU-dF-os8" customClass="TeamSelectViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zaM-r1-60W"/>
+                        <viewControllerLayoutGuide type="bottom" id="kXS-4Z-d7Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FXW-bj-I88">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hS-vp-sE6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="응원 팀 선택" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2f-5t-pjW">
+                                        <rect key="frame" x="210" y="21" width="181" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="181" id="1AC-6g-sCw"/>
+                                            <constraint firstAttribute="height" constant="36" id="JuK-QZ-Sjb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23h-B2-atu">
+                                        <rect key="frame" x="21" y="25" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Lv1-Td-8MS"/>
+                                            <constraint firstAttribute="height" constant="30" id="jK3-FH-2K1"/>
+                                        </constraints>
+                                        <state key="normal" image="Back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="NyU-dF-os8" eventType="touchUpInside" id="au1-cX-NLc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="z2f-5t-pjW" firstAttribute="centerX" secondItem="5hS-vp-sE6" secondAttribute="centerX" id="7V2-zl-vPG"/>
+                                    <constraint firstItem="z2f-5t-pjW" firstAttribute="top" secondItem="5hS-vp-sE6" secondAttribute="top" constant="21" id="Bgu-K3-bQW"/>
+                                    <constraint firstItem="23h-B2-atu" firstAttribute="top" secondItem="5hS-vp-sE6" secondAttribute="top" constant="25" id="NkQ-Ce-lmB"/>
+                                    <constraint firstItem="z2f-5t-pjW" firstAttribute="centerX" secondItem="5hS-vp-sE6" secondAttribute="centerX" id="VCM-uo-Ea6"/>
+                                    <constraint firstItem="z2f-5t-pjW" firstAttribute="top" secondItem="5hS-vp-sE6" secondAttribute="top" constant="21" id="Vh4-kn-jwJ"/>
+                                    <constraint firstItem="23h-B2-atu" firstAttribute="leading" secondItem="5hS-vp-sE6" secondAttribute="leading" constant="21" id="ffd-6r-Rd0"/>
+                                    <constraint firstAttribute="height" constant="68" id="n6x-L8-jJX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7V2-zl-vPG"/>
+                                        <exclude reference="Vh4-kn-jwJ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GSg-Gt-YTe">
+                                <rect key="frame" x="0.0" y="68" width="600" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="K8H-tU-Q4F">
+                                    <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FJH-jn-DGU">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJH-jn-DGU" id="tMT-ef-PsC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5hS-vp-sE6" secondAttribute="trailing" constant="-20" id="FLK-Cg-OhT"/>
+                            <constraint firstItem="5hS-vp-sE6" firstAttribute="top" secondItem="FXW-bj-I88" secondAttribute="topMargin" id="Jsk-ik-FNV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GSg-Gt-YTe" secondAttribute="trailing" constant="-20" id="XJC-m8-vNb"/>
+                            <constraint firstItem="5hS-vp-sE6" firstAttribute="leading" secondItem="FXW-bj-I88" secondAttribute="leadingMargin" constant="-20" id="aOe-hE-oTs"/>
+                            <constraint firstItem="GSg-Gt-YTe" firstAttribute="leading" secondItem="FXW-bj-I88" secondAttribute="leadingMargin" constant="-20" id="lRR-GQ-Cww"/>
+                            <constraint firstItem="kXS-4Z-d7Y" firstAttribute="top" secondItem="GSg-Gt-YTe" secondAttribute="bottom" id="mb6-37-aQX"/>
+                            <constraint firstItem="GSg-Gt-YTe" firstAttribute="top" secondItem="5hS-vp-sE6" secondAttribute="bottom" id="saZ-XS-Xo1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Y6-1p-8Vl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939" y="1617"/>
         </scene>
         <!--순위-->
         <scene sceneID="BZL-dm-HlC">
@@ -376,12 +449,10 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sja-0C-IUe">
                                 <rect key="frame" x="0.0" y="68" width="600" height="483"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Z3N-g5-nGi">
                                     <rect key="frame" x="0.0" y="99" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
@@ -394,7 +465,6 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프리미어리그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-1p-5Hg">
                                                     <rect key="frame" x="22" y="19" width="224" height="34"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="224" id="4nH-Fd-yjz"/>
                                                         <constraint firstAttribute="height" constant="34" id="bUG-Ue-NH1"/>
@@ -405,14 +475,12 @@
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="Imb-VG-w8H">
                                                     <rect key="frame" x="534" y="23" width="25" height="25"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="GDx-J0-aiu"/>
                                                         <constraint firstAttribute="width" constant="25" id="gXG-ZX-iPN"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="HeE-1p-5Hg" firstAttribute="centerY" secondItem="9Ve-Mi-kBa" secondAttribute="centerY" id="Ksj-cf-Ebj"/>
@@ -427,7 +495,6 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <animations/>
                                         <connections>
                                             <outlet property="leagueLbl" destination="HeE-1p-5Hg" id="TcX-ZJ-rWq"/>
                                             <outlet property="starImage" destination="Imb-VG-w8H" id="vWc-5Y-jLU"/>
@@ -440,7 +507,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리그 순위" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjE-Ub-Svv">
                                         <rect key="frame" x="210" y="21" width="181" height="36"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="181" id="ATO-7B-F3X"/>
                                             <constraint firstAttribute="height" constant="36" id="v8D-pB-tWX"/>
@@ -450,7 +516,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="rjE-Ub-Svv" firstAttribute="centerX" secondItem="dKh-be-kBc" secondAttribute="centerX" id="60M-tO-Hcs"/>
@@ -467,7 +532,6 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dKh-be-kBc" firstAttribute="leading" secondItem="p2P-Qk-JU9" secondAttribute="leadingMargin" constant="-20" id="6qc-ID-tH6"/>
@@ -505,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKd-MJ-jW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="85"/>
+            <point key="canvasLocation" x="1169" y="85"/>
         </scene>
         <!--Rank Detail View Controller-->
         <scene sceneID="HAY-3E-dNL">
@@ -524,10 +588,8 @@
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Djn-fO-hev">
                                         <rect key="frame" x="0.0" y="654" width="600" height="2"/>
-                                        <animations/>
                                     </progressView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Djn-fO-hev" firstAttribute="leading" secondItem="gxc-gx-Vwj" secondAttribute="leading" id="8ka-Gb-KK7"/>
@@ -540,7 +602,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프리미어리그(ENG)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vG-pV-tDE">
                                         <rect key="frame" x="210" y="21" width="181" height="36"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="181" id="Qzy-ZP-i8D"/>
                                             <constraint firstAttribute="height" constant="36" id="Vbz-TZ-YRK"/>
@@ -550,11 +611,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUF-IM-w4v">
-                                        <rect key="frame" x="21" y="26" width="25" height="25"/>
-                                        <animations/>
+                                        <rect key="frame" x="21" y="25" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="Wbz-ib-n53"/>
-                                            <constraint firstAttribute="width" constant="25" id="g1t-l8-lXL"/>
+                                            <constraint firstAttribute="height" constant="30" id="Wbz-ib-n53"/>
+                                            <constraint firstAttribute="width" constant="30" id="g1t-l8-lXL"/>
                                         </constraints>
                                         <state key="normal" image="Back"/>
                                         <connections>
@@ -562,10 +622,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.44831326162814999" green="0.80022035256410251" blue="0.17137191365053167" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="cUF-IM-w4v" firstAttribute="top" secondItem="e5S-wc-KeQ" secondAttribute="top" constant="26" id="GGa-f0-csB"/>
+                                    <constraint firstItem="cUF-IM-w4v" firstAttribute="top" secondItem="e5S-wc-KeQ" secondAttribute="top" constant="25" id="GGa-f0-csB"/>
                                     <constraint firstAttribute="height" constant="68" id="McU-VO-kAd"/>
                                     <constraint firstItem="8vG-pV-tDE" firstAttribute="centerX" secondItem="e5S-wc-KeQ" secondAttribute="centerX" id="rPn-gy-lqk"/>
                                     <constraint firstItem="cUF-IM-w4v" firstAttribute="leading" secondItem="e5S-wc-KeQ" secondAttribute="leading" constant="21" id="vp0-0T-kEk"/>
@@ -573,7 +632,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gxc-gx-Vwj" secondAttribute="trailing" id="27s-hY-usM"/>
@@ -603,7 +661,6 @@
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="IhU-w6-1LC">
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>

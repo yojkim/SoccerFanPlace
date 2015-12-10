@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1538FBC10DD77A352EE903FB /* Pods_SoccerFanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F8461595FFB2E7A5E1AF0F /* Pods_SoccerFanApp.framework */; };
 		A64041791C173116003D06B4 /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64041781C173116003D06B4 /* LeagueCell.swift */; };
 		A640417B1C179247003D06B4 /* RankDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640417A1C179247003D06B4 /* RankDetailViewController.swift */; };
 		A640417D1C179A2E003D06B4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640417C1C179A2E003D06B4 /* TransitionManager.swift */; };
@@ -20,9 +21,12 @@
 		A6FBAFDC1C170EDC007735A3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBAFDB1C170EDC007735A3 /* MainViewController.swift */; };
 		A6FBAFE01C170EED007735A3 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBAFDF1C170EED007735A3 /* PlanViewController.swift */; };
 		A6FBAFE21C170EF4007735A3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBAFE11C170EF4007735A3 /* SettingViewController.swift */; };
+		A6FFEAC91C18A08600BCA739 /* TeamSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFEAC81C18A08600BCA739 /* TeamSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66F8461595FFB2E7A5E1AF0F /* Pods_SoccerFanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerFanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1BDFC6B5DC15DB640D4070 /* Pods-SoccerFanApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerFanApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerFanApp/Pods-SoccerFanApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A64041781C173116003D06B4 /* LeagueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
 		A640417A1C179247003D06B4 /* RankDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankDetailViewController.swift; sourceTree = "<group>"; };
 		A640417C1C179A2E003D06B4 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		A6FBAFDB1C170EDC007735A3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A6FBAFDF1C170EED007735A3 /* PlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		A6FBAFE11C170EF4007735A3 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A6FFEAC81C18A08600BCA739 /* TeamSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSelectViewController.swift; sourceTree = "<group>"; };
+		DED96339C4099FF65E3ABC76 /* Pods-SoccerFanApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerFanApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerFanApp/Pods-SoccerFanApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1538FBC10DD77A352EE903FB /* Pods_SoccerFanApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BC7F69977A98C9ADE0EFE1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66F8461595FFB2E7A5E1AF0F /* Pods_SoccerFanApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5744BB4A8E329D81FCA3192A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BDFC6B5DC15DB640D4070 /* Pods-SoccerFanApp.debug.xcconfig */,
+				DED96339C4099FF65E3ABC76 /* Pods-SoccerFanApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A6FBAFAF1C16C09A007735A3 = {
 			isa = PBXGroup;
 			children = (
 				A6FBAFBA1C16C09A007735A3 /* SoccerFanApp */,
 				A6FBAFB91C16C09A007735A3 /* Products */,
+				5744BB4A8E329D81FCA3192A /* Pods */,
+				3BC7F69977A98C9ADE0EFE1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +114,7 @@
 				A640417A1C179247003D06B4 /* RankDetailViewController.swift */,
 				A6FBAFDF1C170EED007735A3 /* PlanViewController.swift */,
 				A6FBAFE11C170EF4007735A3 /* SettingViewController.swift */,
+				A6FFEAC81C18A08600BCA739 /* TeamSelectViewController.swift */,
 				A640417C1C179A2E003D06B4 /* TransitionManager.swift */,
 			);
 			name = Controller;
@@ -127,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6FBAFCA1C16C09A007735A3 /* Build configuration list for PBXNativeTarget "SoccerFanApp" */;
 			buildPhases = (
+				7541B9BE9DD95D4F282B02A6 /* Check Pods Manifest.lock */,
 				A6FBAFB41C16C09A007735A3 /* Sources */,
 				A6FBAFB51C16C09A007735A3 /* Frameworks */,
 				A6FBAFB61C16C09A007735A3 /* Resources */,
+				7A8A0FDC6A6D3C350E1F7BC6 /* Embed Pods Frameworks */,
+				CBF8CEC17F7846E85CB095EA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,6 +219,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7541B9BE9DD95D4F282B02A6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A8A0FDC6A6D3C350E1F7BC6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoccerFanApp/Pods-SoccerFanApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBF8CEC17F7846E85CB095EA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoccerFanApp/Pods-SoccerFanApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A6FBAFB41C16C09A007735A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -199,6 +277,7 @@
 				A64041831C17A28B003D06B4 /* RankViewController.swift in Sources */,
 				A6FBAFBC1C16C09A007735A3 /* AppDelegate.swift in Sources */,
 				A6FBAFE01C170EED007735A3 /* PlanViewController.swift in Sources */,
+				A6FFEAC91C18A08600BCA739 /* TeamSelectViewController.swift in Sources */,
 				A6FBAFDC1C170EDC007735A3 /* MainViewController.swift in Sources */,
 				A64041791C173116003D06B4 /* LeagueCell.swift in Sources */,
 				A640417B1C179247003D06B4 /* RankDetailViewController.swift in Sources */,
@@ -304,6 +383,7 @@
 		};
 		A6FBAFCB1C16C09A007735A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F1BDFC6B5DC15DB640D4070 /* Pods-SoccerFanApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -316,6 +396,7 @@
 		};
 		A6FBAFCC1C16C09A007735A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DED96339C4099FF65E3ABC76 /* Pods-SoccerFanApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
