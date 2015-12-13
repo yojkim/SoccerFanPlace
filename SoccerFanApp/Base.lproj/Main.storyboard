@@ -21,6 +21,7 @@
             <string>NanumBarunpen</string>
             <string>NanumBarunpen</string>
             <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -400,22 +401,36 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GSg-Gt-YTe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GSg-Gt-YTe">
                                 <rect key="frame" x="0.0" y="68" width="600" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="K8H-tU-Q4F">
-                                    <rect key="frame" x="0.0" y="72" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FJH-jn-DGU">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="TeamCell" rowHeight="60" id="FJH-jn-DGU" customClass="TeamCell" customModule="SoccerFanApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJH-jn-DGU" id="tMT-ef-PsC">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="561" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맨체스터 유나이티드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8W-zH-BHr">
+                                                    <rect key="frame" x="34" y="14" width="202" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="202" id="lO3-yp-Kst"/>
+                                                        <constraint firstAttribute="height" constant="32" id="ydF-zd-0dx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="T8W-zH-BHr" firstAttribute="centerY" secondItem="tMT-ef-PsC" secondAttribute="centerY" id="07p-g4-Tnc"/>
+                                                <constraint firstItem="T8W-zH-BHr" firstAttribute="leading" secondItem="tMT-ef-PsC" secondAttribute="leadingMargin" constant="26" id="J0F-Jz-h7H"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="teamLbl" destination="T8W-zH-BHr" id="2BJ-09-FcP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -432,6 +447,9 @@
                             <constraint firstItem="GSg-Gt-YTe" firstAttribute="top" secondItem="5hS-vp-sE6" secondAttribute="bottom" id="saZ-XS-Xo1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="GSg-Gt-YTe" id="Ecc-4i-9hU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Y6-1p-8Vl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
