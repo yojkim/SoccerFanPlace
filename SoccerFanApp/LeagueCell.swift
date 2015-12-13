@@ -11,6 +11,7 @@ import UIKit
 class LeagueCell: UITableViewCell {
     
     @IBOutlet var starImage: UIImageView!
+    @IBOutlet var countryImage: CountryImage!
     @IBOutlet var leagueLbl: UILabel!
     
     override func awakeFromNib() {
@@ -24,8 +25,12 @@ class LeagueCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(name: String) {
+    func configureCell(name: String, countryImage: String?) {
         self.leagueLbl.text = name
+        
+        if let image = countryImage {
+            self.countryImage.image = UIImage(named: image)
+        }
     }
 
 }

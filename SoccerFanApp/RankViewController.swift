@@ -41,7 +41,7 @@ class RankViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("LeagueCell") as? LeagueCell {
             
-            cell.configureCell(name)
+            cell.configureCell(name, countryImage: nil)
             
             return cell
             

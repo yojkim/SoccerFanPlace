@@ -10,6 +10,7 @@ import UIKit
 
 class SettingViewController: UITableViewController {
     
+    @IBOutlet var teamLbl: UILabel!
     @IBOutlet var notiSwitch: UISwitch!
     @IBOutlet var navigationView: UIView!
     
@@ -18,6 +19,7 @@ class SettingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let window = UIApplication.sharedApplication().delegate!.window!!
         let navigationViewRect = CGRectMake(0, 0, self.navigationView.frame.size.width/2, self.navigationView.frame.size.height)
 
@@ -30,6 +32,7 @@ class SettingViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.teamLbl.text = "\(DataServices.ds.supportTeam)"
         let window = UIApplication.sharedApplication().delegate!.window!!
         window.addSubview(navigationView)
     }
@@ -40,7 +43,7 @@ class SettingViewController: UITableViewController {
         
         if (indexPath.section == 0 && indexPath.row == 0) {
 
-            self.performSegueWithIdentifier("SelectSegue", sender: nil)
+            self.performSegueWithIdentifier("LeagueSelectSegue", sender: nil)
             
         } else if (indexPath.section == 2 && indexPath.row == 1) {
             
@@ -51,8 +54,8 @@ class SettingViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "SelectSegue" {
-            if let selectView = segue.destinationViewController as? TeamSelectViewController {
+        if segue.identifier == "LeagueSelectSegue" {
+            if let selectView = segue.destinationViewController as? LeagueSelectViewController {
                 selectView.transitioningDelegate = self.transitionManager
             }
         }
