@@ -565,13 +565,23 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="07r-ZO-Pyl">
+                                                    <rect key="frame" x="553" y="20" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="7GT-q1-GVL"/>
+                                                        <constraint firstAttribute="width" constant="20" id="T5Z-vw-Fhe"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="T8W-zH-BHr" firstAttribute="centerY" secondItem="tMT-ef-PsC" secondAttribute="centerY" id="07p-g4-Tnc"/>
+                                                <constraint firstItem="07r-ZO-Pyl" firstAttribute="centerY" secondItem="tMT-ef-PsC" secondAttribute="centerY" id="Fs1-3R-46h"/>
                                                 <constraint firstItem="T8W-zH-BHr" firstAttribute="leading" secondItem="tMT-ef-PsC" secondAttribute="leadingMargin" constant="25" id="J0F-Jz-h7H"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="07r-ZO-Pyl" secondAttribute="trailing" constant="19" id="mYn-bt-XHa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkImage" destination="07r-ZO-Pyl" id="JSW-DP-8T8"/>
                                             <outlet property="teamLbl" destination="T8W-zH-BHr" id="2BJ-09-FcP"/>
                                         </connections>
                                     </tableViewCell>
@@ -841,6 +851,7 @@
     <resources>
         <image name="Back" width="128" height="128"/>
         <image name="Calendar" width="24" height="24"/>
+        <image name="Check" width="256" height="256"/>
         <image name="KOR" width="640" height="427"/>
         <image name="Rank" width="32" height="32"/>
         <image name="Setting" width="32" height="32"/>

@@ -61,6 +61,7 @@ class LeagueSelectViewController: UIViewController, UITableViewDelegate, UITable
             let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
             if let selectView = segue.destinationViewController as? TeamSelectViewController {
                 selectView.transitioningDelegate = self.transitionManager
+                selectView.leagueString = leagueArray[indexPath.row]
                 selectView.urlString = urlArray[indexPath.row]
             }
         }
