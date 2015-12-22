@@ -24,6 +24,11 @@
             <string>NanumBarunpen</string>
             <string>NanumBarunpen</string>
             <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -129,11 +134,160 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SO9-AC-WcL">
+                                <rect key="frame" x="20" y="68" width="560" height="483"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.91764705882352937" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MatchCell" rowHeight="132" id="JKp-kb-l8b" customClass="MatchCell" customModule="SoccerFanApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JKp-kb-l8b" id="h4a-gE-Ym4">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="131.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vb3-Nv-Aue" userLabel="ContainerView" customClass="MaterialView" customModule="SoccerFanApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="8" width="560" height="116"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7Y-8C-zdY">
+                                                            <rect key="frame" x="8" y="24" width="82" height="37"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="82" id="3du-9q-WIn"/>
+                                                                <constraint firstAttribute="height" constant="37" id="SBk-hE-uBe"/>
+                                                                <constraint firstAttribute="height" constant="37" id="XsW-R9-KHr"/>
+                                                                <constraint firstAttribute="width" constant="82" id="w3D-dT-jHZ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="24"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="SBk-hE-uBe"/>
+                                                                    <exclude reference="w3D-dT-jHZ"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="matchNow" translatesAutoresizingMaskIntoConstraints="NO" id="urT-mZ-Al7">
+                                                            <rect key="frame" x="19" y="69" width="61" height="23"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="23" id="2Lz-SS-AY9"/>
+                                                                <constraint firstAttribute="width" constant="61" id="pJy-yo-ABc"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5X1-Wi-KBh">
+                                                            <rect key="frame" x="522" y="19" width="30" height="78"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRg-Pg-Nbb">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="39"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="n0b-Bc-dY6"/>
+                                                                        <constraint firstAttribute="width" constant="30" id="o12-3N-i1Z"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="24"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBx-cv-eof">
+                                                                    <rect key="frame" x="0.0" y="39" width="30" height="39"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="30" id="MqH-Cg-OO3"/>
+                                                                        <constraint firstAttribute="height" constant="39" id="NfK-r8-37c"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="24"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FRI-al-Frd">
+                                                            <rect key="frame" x="88" y="19" width="124" height="78"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="아틀레티코 마드리드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-S0-dxG">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="124" height="39"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="82" id="JfI-Or-T51"/>
+                                                                        <constraint firstAttribute="height" constant="39" id="NuJ-et-dBG"/>
+                                                                        <constraint firstAttribute="height" constant="37" id="ofI-KY-zg6"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="JfI-Or-T51"/>
+                                                                            <exclude reference="ofI-KY-zg6"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="뉴캐슬 유나이티드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-fH-Zxe">
+                                                                    <rect key="frame" x="0.0" y="39" width="124" height="39"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="9Cl-qT-Qbh"/>
+                                                                        <constraint firstAttribute="height" constant="37" id="fKH-jw-pAZ"/>
+                                                                        <constraint firstAttribute="width" constant="82" id="qUq-Z4-7vN"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="fKH-jw-pAZ"/>
+                                                                            <exclude reference="qUq-Z4-7vN"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="5X1-Wi-KBh" secondAttribute="trailing" constant="8" id="BAi-Yh-32e"/>
+                                                        <constraint firstItem="urT-mZ-Al7" firstAttribute="top" secondItem="G7Y-8C-zdY" secondAttribute="bottom" constant="8" id="GkH-F0-9mL"/>
+                                                        <constraint firstItem="G7Y-8C-zdY" firstAttribute="leading" secondItem="vb3-Nv-Aue" secondAttribute="leading" constant="8" id="HPb-xB-UJw"/>
+                                                        <constraint firstItem="5X1-Wi-KBh" firstAttribute="centerY" secondItem="vb3-Nv-Aue" secondAttribute="centerY" id="Nel-gK-0Hf"/>
+                                                        <constraint firstItem="G7Y-8C-zdY" firstAttribute="top" secondItem="vb3-Nv-Aue" secondAttribute="top" constant="24" id="fa6-MF-gcW"/>
+                                                        <constraint firstItem="FRI-al-Frd" firstAttribute="leading" secondItem="urT-mZ-Al7" secondAttribute="trailing" constant="8" id="hvt-fP-Nxp"/>
+                                                        <constraint firstItem="FRI-al-Frd" firstAttribute="centerY" secondItem="vb3-Nv-Aue" secondAttribute="centerY" id="jmU-fZ-TcL"/>
+                                                        <constraint firstItem="urT-mZ-Al7" firstAttribute="leading" secondItem="vb3-Nv-Aue" secondAttribute="leading" constant="19" id="wph-Km-tbO"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="vb3-Nv-Aue" firstAttribute="top" secondItem="h4a-gE-Ym4" secondAttribute="topMargin" id="4sM-z7-hZ6"/>
+                                                <constraint firstAttribute="trailing" secondItem="vb3-Nv-Aue" secondAttribute="trailing" id="IVv-6j-TTK"/>
+                                                <constraint firstAttribute="bottom" secondItem="vb3-Nv-Aue" secondAttribute="bottom" constant="8" id="TMy-oB-UEL"/>
+                                                <constraint firstItem="vb3-Nv-Aue" firstAttribute="bottom" secondItem="h4a-gE-Ym4" secondAttribute="bottomMargin" id="UQ9-BJ-3Dl"/>
+                                                <constraint firstItem="vb3-Nv-Aue" firstAttribute="leading" secondItem="h4a-gE-Ym4" secondAttribute="leading" id="dCD-Vc-1qE"/>
+                                                <constraint firstItem="vb3-Nv-Aue" firstAttribute="top" secondItem="h4a-gE-Ym4" secondAttribute="top" constant="16" id="hEM-jK-GiO"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="TMy-oB-UEL"/>
+                                                    <exclude reference="hEM-jK-GiO"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="awayTeamLabel" destination="kHA-fH-Zxe" id="MjQ-WO-g9e"/>
+                                            <outlet property="awayTeamScore" destination="TBx-cv-eof" id="sKr-JF-zaI"/>
+                                            <outlet property="homeTeamLabel" destination="JWN-S0-dxG" id="a5L-yB-zts"/>
+                                            <outlet property="homeTeamScore" destination="VRg-Pg-Nbb" id="GoB-wF-FSu"/>
+                                            <outlet property="statusImage" destination="urT-mZ-Al7" id="QGp-AA-OgL"/>
+                                            <outlet property="timeLabel" destination="G7Y-8C-zdY" id="KLj-82-9XC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Dik-4v-iat" firstAttribute="top" secondItem="SO9-AC-WcL" secondAttribute="bottom" id="APg-0c-2Lj"/>
+                            <constraint firstItem="SO9-AC-WcL" firstAttribute="top" secondItem="c4F-iU-1Wm" secondAttribute="bottom" id="EOy-bI-OL3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c4F-iU-1Wm" secondAttribute="trailing" constant="-20" id="I5C-FS-sWL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SO9-AC-WcL" secondAttribute="trailing" id="QyG-Ql-WD2"/>
                             <constraint firstItem="c4F-iU-1Wm" firstAttribute="leading" secondItem="M2j-fv-4qe" secondAttribute="leadingMargin" constant="-20" id="VS6-vA-O6P"/>
+                            <constraint firstItem="SO9-AC-WcL" firstAttribute="leading" secondItem="M2j-fv-4qe" secondAttribute="leadingMargin" id="rPZ-aa-NeT"/>
                             <constraint firstItem="c4F-iU-1Wm" firstAttribute="top" secondItem="M2j-fv-4qe" secondAttribute="topMargin" id="s6V-5f-9xC"/>
                         </constraints>
                     </view>
@@ -857,5 +1011,6 @@
         <image name="Setting" width="32" height="32"/>
         <image name="Stadium" width="32" height="32"/>
         <image name="Star" width="256" height="256"/>
+        <image name="matchNow" width="300" height="100"/>
     </resources>
 </document>

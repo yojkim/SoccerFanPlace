@@ -59,6 +59,19 @@ class DataServices {
         }
     }
     
+    private var _supportTeamURL: String {
+        get {
+            var tempString = NSUserDefaults.standardUserDefaults().objectForKey("supportTeamURL") as? String
+            
+            return tempString!
+        }
+        
+        set(newValue) {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "supportTeamURL")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+    }
+    
     var supportLeague: NSString {
         get {
             return _supportLeague
@@ -89,6 +102,17 @@ class DataServices {
         set(newValue) {
             _supportTeamIndex = newValue
             print(newValue)
+        }
+    }
+    
+    var supportTeamURL: String {
+        get {
+            return _supportTeamURL
+        }
+        
+        set(newValue) {
+            _supportTeamURL = newValue
+            print(supportTeamURL)
         }
     }
     

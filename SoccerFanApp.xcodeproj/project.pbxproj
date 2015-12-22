@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1538FBC10DD77A352EE903FB /* Pods_SoccerFanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F8461595FFB2E7A5E1AF0F /* Pods_SoccerFanApp.framework */; };
 		A601C7C11C19F4BB0041C0C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601C7C01C19F4BB0041C0C3 /* Constants.swift */; };
+		A60479D41C2713D500396648 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60479D31C2713D500396648 /* MatchCell.swift */; };
+		A60479D61C27140600396648 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60479D51C27140600396648 /* MaterialView.swift */; };
 		A625BC6E1C1C8A1800541CD3 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625BC6D1C1C8A1800541CD3 /* TeamCell.swift */; };
 		A625BC701C1D318100541CD3 /* LeagueSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625BC6F1C1D318100541CD3 /* LeagueSelectViewController.swift */; };
 		A625BC721C1D3D8500541CD3 /* CountryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625BC711C1D3D8500541CD3 /* CountryImage.swift */; };
@@ -33,6 +35,8 @@
 		66F8461595FFB2E7A5E1AF0F /* Pods_SoccerFanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerFanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1BDFC6B5DC15DB640D4070 /* Pods-SoccerFanApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerFanApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerFanApp/Pods-SoccerFanApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A601C7C01C19F4BB0041C0C3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A60479D31C2713D500396648 /* MatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		A60479D51C27140600396648 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		A625BC6D1C1C8A1800541CD3 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		A625BC6F1C1D318100541CD3 /* LeagueSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueSelectViewController.swift; sourceTree = "<group>"; };
 		A625BC711C1D3D8500541CD3 /* CountryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryImage.swift; sourceTree = "<group>"; };
@@ -156,7 +160,9 @@
 				A6FBAFD51C16C437007735A3 /* Launch Screen.storyboard */,
 				A64041781C173116003D06B4 /* LeagueCell.swift */,
 				A625BC6D1C1C8A1800541CD3 /* TeamCell.swift */,
+				A60479D31C2713D500396648 /* MatchCell.swift */,
 				A625BC711C1D3D8500541CD3 /* CountryImage.swift */,
+				A60479D51C27140600396648 /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -303,12 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A60479D41C2713D500396648 /* MatchCell.swift in Sources */,
 				A640417D1C179A2E003D06B4 /* TransitionManager.swift in Sources */,
 				A625BC741C1D6D0E00541CD3 /* DataServices.swift in Sources */,
 				A6FBAFE21C170EF4007735A3 /* SettingViewController.swift in Sources */,
 				A64041831C17A28B003D06B4 /* RankViewController.swift in Sources */,
 				A6FBAFBC1C16C09A007735A3 /* AppDelegate.swift in Sources */,
 				A625BC6E1C1C8A1800541CD3 /* TeamCell.swift in Sources */,
+				A60479D61C27140600396648 /* MaterialView.swift in Sources */,
 				A625BC721C1D3D8500541CD3 /* CountryImage.swift in Sources */,
 				A6FBAFE01C170EED007735A3 /* PlanViewController.swift in Sources */,
 				A601C7C11C19F4BB0041C0C3 /* Constants.swift in Sources */,
@@ -424,6 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SoccerFanApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = burgyDev.SoccerFanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,6 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SoccerFanApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = burgyDev.SoccerFanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

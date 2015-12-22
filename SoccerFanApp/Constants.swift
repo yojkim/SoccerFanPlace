@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+let SHADOW_COLOR: CGFloat = 157.0 / 255.0
+
+// URLS
 let SOCCER_DEFAULT = "http://kr.soccerway.com"
 let LEAGUE_PREMIER = "/national/england/premier-league/20152016/regular-round/r31553/"
 let LEAGUE_CHAMPIONSHIP = "/national/england/championship/20152016/regular-season/r31555/"

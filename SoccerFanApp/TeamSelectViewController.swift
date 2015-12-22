@@ -17,16 +17,20 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
     
     var leagueString: NSString!
     var htmlString: NSString?
+    
     var teamArray: [String] = []
-    var sortedTeamArray: [String]!
+    var teamLinks: [String] = []
+    var teamDictionary = Dictionary<String,String>()
     var urlString: String?
     var count: Int = 0
     
-    
+    var rawContent: String!
     
     override func viewDidLoad() {
         loadSoccerTeamData()
-        sortedTeamArray = teamArray.sort { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
+        
+        sortTeamDictionary()
+        //sortedTeamArray = teamArray.sort { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -52,7 +56,8 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
             
             if let html = Kanna.HTML(html: htmlString as! String, encoding: NSUTF8StringEncoding) {
                 for content in html.xpath("//table[@id='page_competition_1_block_competition_tables_8_block_competition_league_table_1_table']/tbody/tr/td[@class='text team large-link']/a") {
-                    teamArray.append("\(content["title"]!)")
+                    
+                    teamDictionary["\(content["title"]!)"] = "\(content["href"]!)"
                     count++
                 }
             }
@@ -64,16 +69,16 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.sortedTeamArray.count
+        return self.teamArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let name = sortedTeamArray[indexPath.row]
+        let name = teamArray[indexPath.row]
         
         if let cell = self.tableView.dequeueReusableCellWithIdentifier("TeamCell") as? TeamCell {
             if DataServices.ds.supportTeamIndex == indexPath.row && DataServices.ds.supportLeague == leagueString {
                 print(indexPath.row)
-                print(sortedTeamArray[indexPath.row])
+                print(teamArray[indexPath.row])
                 cell.configureCell(name, checked: true)
             } else {
                 cell.configureCell(name, checked: false)
@@ -108,14 +113,19 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
         
         if let cell = self.tableView.cellForRowAtIndexPath(indexPath) as? TeamCell {
             
+            // select same thing
             if DataServices.ds.supportTeamIndex == indexPath.row && DataServices.ds.supportLeague == leagueString {
                 print(cell.teamLbl.text!)
                 cell.checkImage.hidden = false
                 cell.checkImage.image = UIImage(named: "Check")
             }
+                
+            // select new thing
             else {
                 print(cell.teamLbl.text!)
                 DataServices.ds.supportTeam = cell.teamLbl.text!
+                print("\(SOCCER_DEFAULT)/\(teamLinks[indexPath.row])")
+                DataServices.ds.supportTeamURL = "\(SOCCER_DEFAULT)/\(teamLinks[indexPath.row])"
                 DataServices.ds.supportLeague = self.leagueString
                 DataServices.ds.supportTeamIndex = indexPath.row
                 
@@ -126,5 +136,13 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
         }
         
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func sortTeamDictionary() {
+        
+        let tempArray = teamDictionary.sort { $0.0 < $1.0 }
+        
+        teamArray = tempArray.map { return $0.0 }
+        teamLinks = tempArray.map { return $0.1 }
     }
 }

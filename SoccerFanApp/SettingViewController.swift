@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingViewController: UITableViewController {
+class SettingViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet var teamLbl: UILabel!
     @IBOutlet var notiSwitch: UISwitch!
@@ -45,13 +46,45 @@ class SettingViewController: UITableViewController {
 
             self.performSegueWithIdentifier("LeagueSelectSegue", sender: nil)
             
+        // mail to youthful2016@gmail.com
         } else if (indexPath.section == 2 && indexPath.row == 1) {
-            
-            // mail to youthful2016@gmail.com
+            let mailComposeViewController = configureMailComposeViewController()
+            if MFMailComposeViewController.canSendMail() {
+                self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+            } else {
+                self.showSendMailErrorAlert()
+            }
             
         }
         
     }
+    
+    // mail part --------------
+    func configureMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerViewController = MFMailComposeViewController()
+        mailComposerViewController.mailComposeDelegate = self
+        
+        mailComposerViewController.setToRecipients(["youthful2016@gmail.com"])
+        mailComposerViewController.setSubject("")
+        mailComposerViewController.setMessageBody("건의사항 혹은 연락 : ", isHTML: false)
+        
+        return mailComposerViewController
+    }
+    
+    func showSendMailErrorAlert() {
+        
+        let alertView = UIAlertController(title: "메일을 보낼 수 없습니다.", message: "", preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "확인", style: .Default, handler: nil )
+        
+        alertView.addAction(alertAction)
+        
+        self.presentViewController(alertView, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+    // ------------------------
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "LeagueSelectSegue" {
