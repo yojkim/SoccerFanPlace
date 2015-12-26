@@ -124,8 +124,8 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
             else {
                 print(cell.teamLbl.text!)
                 DataServices.ds.supportTeam = cell.teamLbl.text!
-                print("\(SOCCER_DEFAULT)/\(teamLinks[indexPath.row])")
-                DataServices.ds.supportTeamURL = "\(SOCCER_DEFAULT)/\(teamLinks[indexPath.row])"
+                DataServices.ds.supportTeamURL = "\(SOCCER_DEFAULT)\(teamLinks[indexPath.row])"
+                setStartPoint()
                 DataServices.ds.supportLeague = self.leagueString
                 DataServices.ds.supportTeamIndex = indexPath.row
                 
@@ -144,5 +144,66 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
         
         teamArray = tempArray.map { return $0.0 }
         teamLinks = tempArray.map { return $0.1 }
+    }
+    
+    func setStartPoint() {
+        
+        urlString = DataServices.ds.supportTeamURL
+        
+        let url: NSURL!
+        if let temp = urlString {
+            print("\(temp)matches")
+            url = NSURL(string: "\(temp)matches/")
+        } else {
+            url = NSURL(string: "http://kr.soccerway.com/teams/england/manchester-city-football-club/676/matchesasdf")
+        }
+        
+        do {
+            self.htmlString = try NSString(contentsOfURL: url!, encoding: NSUTF8StringEncoding)
+            
+            if let html = Kanna.HTML(html: htmlString as! String, encoding: NSUTF8StringEncoding) {
+                
+                var count = 0
+                var skip = 0
+                for content in html.xpath("//td[contains(@class,'score-time')]/a") {
+                    // if class value exist?
+                    if let result = content["class"] {
+                        if count >= 46 && count <= 49 {
+                            DataServices.ds.searchStartPoint = 44 - skip
+                            DataServices.ds.skipCount = skip
+                            DataServices.ds.lastIndex = count
+                        }
+                    } else {
+                        
+                        if content["title"] == "Cancelled" {
+                            skip++
+                            if count == 49 {
+                                DataServices.ds.searchStartPoint = count-(5+skip)
+                                DataServices.ds.skipCount = skip
+                                DataServices.ds.lastIndex = count
+                            }
+                        } else {
+                            if count >= 46 && count <= 49 {
+                                DataServices.ds.searchStartPoint = 44 - skip
+                                DataServices.ds.skipCount = skip
+                                DataServices.ds.lastIndex = count-1
+                            } else {
+                                DataServices.ds.searchStartPoint = count-(2+skip)
+                                DataServices.ds.skipCount = skip
+                                DataServices.ds.lastIndex = count
+                                print("startPoint : \(count-(2+skip))")
+                            }
+                            break
+                        }
+                    }
+                    count++
+                }
+            }
+
+            
+        } catch {
+            print("error")
+        }
+        
     }
 }

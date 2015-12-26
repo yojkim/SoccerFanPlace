@@ -134,7 +134,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SO9-AC-WcL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SO9-AC-WcL">
                                 <rect key="frame" x="20" y="68" width="560" height="483"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.91764705882352937" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -142,7 +142,7 @@
                                         <rect key="frame" x="0.0" y="28" width="560" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JKp-kb-l8b" id="h4a-gE-Ym4">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="131.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vb3-Nv-Aue" userLabel="ContainerView" customClass="MaterialView" customModule="SoccerFanApp" customModuleProvider="target">
@@ -198,10 +198,10 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FRI-al-Frd">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FRI-al-Frd">
                                                             <rect key="frame" x="88" y="19" width="124" height="78"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="아틀레티코 마드리드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-S0-dxG">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아틀레티코 마드리드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-S0-dxG">
                                                                     <rect key="frame" x="0.0" y="0.0" width="124" height="39"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="82" id="JfI-Or-T51"/>
@@ -218,7 +218,7 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="뉴캐슬 유나이티드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-fH-Zxe">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뉴캐슬 유나이티드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-fH-Zxe">
                                                                     <rect key="frame" x="0.0" y="39" width="124" height="39"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="39" id="9Cl-qT-Qbh"/>
@@ -267,20 +267,20 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="awayTeamLabel" destination="kHA-fH-Zxe" id="MjQ-WO-g9e"/>
                                             <outlet property="awayTeamScore" destination="TBx-cv-eof" id="sKr-JF-zaI"/>
                                             <outlet property="homeTeamLabel" destination="JWN-S0-dxG" id="a5L-yB-zts"/>
                                             <outlet property="homeTeamScore" destination="VRg-Pg-Nbb" id="GoB-wF-FSu"/>
                                             <outlet property="statusImage" destination="urT-mZ-Al7" id="QGp-AA-OgL"/>
-                                            <outlet property="timeLabel" destination="G7Y-8C-zdY" id="KLj-82-9XC"/>
+                                            <outlet property="timeResultLabel" destination="G7Y-8C-zdY" id="hjL-by-SFo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Dik-4v-iat" firstAttribute="top" secondItem="SO9-AC-WcL" secondAttribute="bottom" id="APg-0c-2Lj"/>
                             <constraint firstItem="SO9-AC-WcL" firstAttribute="top" secondItem="c4F-iU-1Wm" secondAttribute="bottom" id="EOy-bI-OL3"/>
@@ -298,6 +298,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="SO9-AC-WcL" id="MNq-cd-bZX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPJ-Zb-bUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

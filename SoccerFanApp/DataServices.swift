@@ -62,12 +62,66 @@ class DataServices {
     private var _supportTeamURL: String {
         get {
             var tempString = NSUserDefaults.standardUserDefaults().objectForKey("supportTeamURL") as? String
+            if tempString == nil {
+                tempString = "http://kr.soccerway.com/teams/england/newcastle-united-football-club/664/"
+            }
             
             return tempString!
         }
         
         set(newValue) {
             NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "supportTeamURL")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+    }
+    
+    private var _searchStartPoint: Int {
+        get {
+            var tempInt = NSUserDefaults.standardUserDefaults().objectForKey("searchStartPoint") as? Int
+            
+            if tempInt == nil {
+                tempInt = 23
+            }
+            
+            return tempInt!
+        }
+        
+        set(newValue) {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "searchStartPoint")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+    }
+    
+    private var _skipCount: Int {
+        get {
+            var tempInt = NSUserDefaults.standardUserDefaults().objectForKey("skipCount") as? Int
+            
+            if tempInt == nil {
+                tempInt = 0
+            }
+            
+            return tempInt!
+        }
+        
+        set(newValue) {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "skipCount")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+    }
+    
+    private var _lastIndex: Int {
+        get {
+            var tempInt = NSUserDefaults.standardUserDefaults().objectForKey("lastIndex") as? Int
+            
+            if tempInt == nil {
+                tempInt = 0
+            }
+            
+            return tempInt!
+        }
+        
+        set(newValue) {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "lastIndex")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
     }
@@ -113,6 +167,36 @@ class DataServices {
         set(newValue) {
             _supportTeamURL = newValue
             print(supportTeamURL)
+        }
+    }
+    
+    var searchStartPoint: Int {
+        get {
+            return _searchStartPoint
+        }
+        
+        set(newValue) {
+            _searchStartPoint = newValue
+        }
+    }
+    
+    var skipCount: Int {
+        get {
+            return _skipCount
+        }
+        
+        set(newValue) {
+            _skipCount = newValue
+        }
+    }
+    
+    var lastIndex: Int {
+        get {
+            return _lastIndex
+        }
+        
+        set(newValue) {
+            _lastIndex = newValue
         }
     }
     
