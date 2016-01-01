@@ -25,12 +25,17 @@ class LeagueCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(name: String, countryImage: String?) {
-        self.leagueLbl.text = name
+    func configureCell(name: String, countryImage: String) {
         
-        if let image = countryImage {
-            self.countryImage.image = UIImage(named: image)
+        if let star = self.starImage {
+            star.hidden = true
+            if name == DataServices.ds.supportLeague {
+                star.hidden = false
+            }
         }
+        
+        self.leagueLbl.text = name
+        self.countryImage.image = UIImage(named: countryImage)
     }
 
 }

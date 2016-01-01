@@ -29,6 +29,8 @@
             <string>NanumBarunpen</string>
             <string>NanumBarunpen</string>
             <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -134,45 +136,20 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SO9-AC-WcL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SO9-AC-WcL">
                                 <rect key="frame" x="20" y="68" width="560" height="483"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.91764705882352937" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MatchCell" rowHeight="132" id="JKp-kb-l8b" customClass="MatchCell" customModule="SoccerFanApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="132"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MatchCell" rowHeight="160" id="JKp-kb-l8b" customClass="MatchCell" customModule="SoccerFanApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JKp-kb-l8b" id="h4a-gE-Ym4">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="132"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vb3-Nv-Aue" userLabel="ContainerView" customClass="MaterialView" customModule="SoccerFanApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="8" width="560" height="116"/>
+                                                    <rect key="frame" x="0.0" y="36" width="560" height="116"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7Y-8C-zdY">
-                                                            <rect key="frame" x="8" y="24" width="82" height="37"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="82" id="3du-9q-WIn"/>
-                                                                <constraint firstAttribute="height" constant="37" id="SBk-hE-uBe"/>
-                                                                <constraint firstAttribute="height" constant="37" id="XsW-R9-KHr"/>
-                                                                <constraint firstAttribute="width" constant="82" id="w3D-dT-jHZ"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="24"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <variation key="default">
-                                                                <mask key="constraints">
-                                                                    <exclude reference="SBk-hE-uBe"/>
-                                                                    <exclude reference="w3D-dT-jHZ"/>
-                                                                </mask>
-                                                            </variation>
-                                                        </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="matchNow" translatesAutoresizingMaskIntoConstraints="NO" id="urT-mZ-Al7">
-                                                            <rect key="frame" x="19" y="69" width="61" height="23"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="23" id="2Lz-SS-AY9"/>
-                                                                <constraint firstAttribute="width" constant="61" id="pJy-yo-ABc"/>
-                                                            </constraints>
-                                                        </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5X1-Wi-KBh">
                                                             <rect key="frame" x="522" y="19" width="30" height="78"/>
                                                             <subviews>
@@ -201,7 +178,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FRI-al-Frd">
                                                             <rect key="frame" x="88" y="19" width="124" height="78"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아틀레티코 마드리드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-S0-dxG">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아틀레티코 마드리드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-S0-dxG">
                                                                     <rect key="frame" x="0.0" y="0.0" width="124" height="39"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="82" id="JfI-Or-T51"/>
@@ -218,7 +195,7 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뉴캐슬 유나이티드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-fH-Zxe">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뉴캐슬 유나이티드" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-fH-Zxe">
                                                                     <rect key="frame" x="0.0" y="39" width="124" height="39"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="39" id="9Cl-qT-Qbh"/>
@@ -237,28 +214,77 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7Y-8C-zdY">
+                                                            <rect key="frame" x="8" y="27" width="82" height="28"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="82" id="3du-9q-WIn"/>
+                                                                <constraint firstAttribute="height" constant="37" id="SBk-hE-uBe"/>
+                                                                <constraint firstAttribute="height" constant="28" id="XsW-R9-KHr"/>
+                                                                <constraint firstAttribute="width" constant="82" id="w3D-dT-jHZ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="SBk-hE-uBe"/>
+                                                                    <exclude reference="w3D-dT-jHZ"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="matchNow" translatesAutoresizingMaskIntoConstraints="NO" id="urT-mZ-Al7">
+                                                            <rect key="frame" x="23" y="69" width="53" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="2Lz-SS-AY9"/>
+                                                                <constraint firstAttribute="width" constant="53" id="pJy-yo-ABc"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="5X1-Wi-KBh" secondAttribute="trailing" constant="8" id="BAi-Yh-32e"/>
-                                                        <constraint firstItem="urT-mZ-Al7" firstAttribute="top" secondItem="G7Y-8C-zdY" secondAttribute="bottom" constant="8" id="GkH-F0-9mL"/>
+                                                        <constraint firstItem="urT-mZ-Al7" firstAttribute="top" secondItem="G7Y-8C-zdY" secondAttribute="bottom" constant="14" id="GkH-F0-9mL"/>
                                                         <constraint firstItem="G7Y-8C-zdY" firstAttribute="leading" secondItem="vb3-Nv-Aue" secondAttribute="leading" constant="8" id="HPb-xB-UJw"/>
                                                         <constraint firstItem="5X1-Wi-KBh" firstAttribute="centerY" secondItem="vb3-Nv-Aue" secondAttribute="centerY" id="Nel-gK-0Hf"/>
-                                                        <constraint firstItem="G7Y-8C-zdY" firstAttribute="top" secondItem="vb3-Nv-Aue" secondAttribute="top" constant="24" id="fa6-MF-gcW"/>
-                                                        <constraint firstItem="FRI-al-Frd" firstAttribute="leading" secondItem="urT-mZ-Al7" secondAttribute="trailing" constant="8" id="hvt-fP-Nxp"/>
+                                                        <constraint firstItem="G7Y-8C-zdY" firstAttribute="top" secondItem="vb3-Nv-Aue" secondAttribute="top" constant="27" id="fa6-MF-gcW"/>
+                                                        <constraint firstItem="FRI-al-Frd" firstAttribute="leading" secondItem="urT-mZ-Al7" secondAttribute="trailing" constant="12" id="hvt-fP-Nxp"/>
                                                         <constraint firstItem="FRI-al-Frd" firstAttribute="centerY" secondItem="vb3-Nv-Aue" secondAttribute="centerY" id="jmU-fZ-TcL"/>
-                                                        <constraint firstItem="urT-mZ-Al7" firstAttribute="leading" secondItem="vb3-Nv-Aue" secondAttribute="leading" constant="19" id="wph-Km-tbO"/>
+                                                        <constraint firstItem="urT-mZ-Al7" firstAttribute="leading" secondItem="vb3-Nv-Aue" secondAttribute="leading" constant="23" id="wph-Km-tbO"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016년 01월 03일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4Z-5i-Ov5">
+                                                    <rect key="frame" x="8" y="8" width="154" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="36a-gX-sir"/>
+                                                        <constraint firstAttribute="width" constant="154" id="44F-AW-HSD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프리리" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="YYC-7G-elJ">
+                                                    <rect key="frame" x="420" y="8" width="132" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="132" id="TUw-ye-Ks6"/>
+                                                        <constraint firstAttribute="height" constant="22" id="wqC-Ik-dK2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="vb3-Nv-Aue" firstAttribute="top" secondItem="h4a-gE-Ym4" secondAttribute="topMargin" id="4sM-z7-hZ6"/>
+                                                <constraint firstItem="vb3-Nv-Aue" firstAttribute="top" secondItem="h4a-gE-Ym4" secondAttribute="topMargin" constant="28" id="4sM-z7-hZ6"/>
                                                 <constraint firstAttribute="trailing" secondItem="vb3-Nv-Aue" secondAttribute="trailing" id="IVv-6j-TTK"/>
                                                 <constraint firstAttribute="bottom" secondItem="vb3-Nv-Aue" secondAttribute="bottom" constant="8" id="TMy-oB-UEL"/>
+                                                <constraint firstItem="c4Z-5i-Ov5" firstAttribute="leading" secondItem="h4a-gE-Ym4" secondAttribute="leadingMargin" id="TZ3-Mh-SvO"/>
                                                 <constraint firstItem="vb3-Nv-Aue" firstAttribute="bottom" secondItem="h4a-gE-Ym4" secondAttribute="bottomMargin" id="UQ9-BJ-3Dl"/>
+                                                <constraint firstItem="YYC-7G-elJ" firstAttribute="trailing" secondItem="h4a-gE-Ym4" secondAttribute="trailingMargin" id="bxk-de-wKT"/>
                                                 <constraint firstItem="vb3-Nv-Aue" firstAttribute="leading" secondItem="h4a-gE-Ym4" secondAttribute="leading" id="dCD-Vc-1qE"/>
                                                 <constraint firstItem="vb3-Nv-Aue" firstAttribute="top" secondItem="h4a-gE-Ym4" secondAttribute="top" constant="16" id="hEM-jK-GiO"/>
+                                                <constraint firstItem="YYC-7G-elJ" firstAttribute="top" secondItem="h4a-gE-Ym4" secondAttribute="topMargin" id="kDo-op-waR"/>
+                                                <constraint firstItem="c4Z-5i-Ov5" firstAttribute="top" secondItem="h4a-gE-Ym4" secondAttribute="topMargin" id="mQh-fP-8xc"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -271,8 +297,10 @@
                                         <connections>
                                             <outlet property="awayTeamLabel" destination="kHA-fH-Zxe" id="MjQ-WO-g9e"/>
                                             <outlet property="awayTeamScore" destination="TBx-cv-eof" id="sKr-JF-zaI"/>
+                                            <outlet property="dateLabel" destination="c4Z-5i-Ov5" id="wLz-Bd-mug"/>
                                             <outlet property="homeTeamLabel" destination="JWN-S0-dxG" id="a5L-yB-zts"/>
                                             <outlet property="homeTeamScore" destination="VRg-Pg-Nbb" id="GoB-wF-FSu"/>
+                                            <outlet property="leagueLabel" destination="YYC-7G-elJ" id="8lE-e4-t3j"/>
                                             <outlet property="statusImage" destination="urT-mZ-Al7" id="QGp-AA-OgL"/>
                                             <outlet property="timeResultLabel" destination="G7Y-8C-zdY" id="hjL-by-SFo"/>
                                         </connections>
@@ -793,16 +821,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="70.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프리미어리그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-1p-5Hg">
-                                                    <rect key="frame" x="22" y="19" width="224" height="34"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="224" id="4nH-Fd-yjz"/>
-                                                        <constraint firstAttribute="height" constant="34" id="bUG-Ue-NH1"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z99-LN-cLO">
+                                                    <rect key="frame" x="22" y="19" width="269" height="34"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="프리미어리그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-1p-5Hg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="224" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="224" id="4nH-Fd-yjz"/>
+                                                                <constraint firstAttribute="height" constant="34" id="bUG-Ue-NH1"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="KOR" translatesAutoresizingMaskIntoConstraints="NO" id="dSQ-xv-EfI" customClass="CountryImage" customModule="SoccerFanApp" customModuleProvider="target">
+                                                            <rect key="frame" x="224" y="0.0" width="45" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="eZL-ky-Qe0"/>
+                                                                <constraint firstAttribute="height" constant="32" id="kV4-m3-dct"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="Imb-VG-w8H">
                                                     <rect key="frame" x="534" y="23" width="25" height="25"/>
                                                     <constraints>
@@ -813,19 +853,12 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="HeE-1p-5Hg" firstAttribute="centerY" secondItem="9Ve-Mi-kBa" secondAttribute="centerY" id="Ksj-cf-Ebj"/>
-                                                <constraint firstItem="HeE-1p-5Hg" firstAttribute="leading" secondItem="9Ve-Mi-kBa" secondAttribute="leadingMargin" constant="14" id="Tdl-Xi-lds"/>
                                                 <constraint firstItem="Imb-VG-w8H" firstAttribute="centerY" secondItem="9Ve-Mi-kBa" secondAttribute="centerY" id="aqB-dH-hma"/>
-                                                <constraint firstItem="HeE-1p-5Hg" firstAttribute="leading" secondItem="9Ve-Mi-kBa" secondAttribute="leadingMargin" id="co4-Ab-FZn"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Imb-VG-w8H" secondAttribute="trailing" id="sDW-Tf-H85"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="co4-Ab-FZn"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="countryImage" destination="dSQ-xv-EfI" id="tFX-Gg-jXi"/>
                                             <outlet property="leagueLbl" destination="HeE-1p-5Hg" id="TcX-ZJ-rWq"/>
                                             <outlet property="starImage" destination="Imb-VG-w8H" id="vWc-5Y-jLU"/>
                                         </connections>
@@ -1014,6 +1047,6 @@
         <image name="Setting" width="32" height="32"/>
         <image name="Stadium" width="32" height="32"/>
         <image name="Star" width="256" height="256"/>
-        <image name="matchNow" width="300" height="100"/>
+        <image name="matchNow" width="600" height="200"/>
     </resources>
 </document>

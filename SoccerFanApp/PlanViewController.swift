@@ -21,6 +21,13 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     var homeTeam = [String]()
     var awayTeam = [String]()
     
+    var dayArray = [String]()
+    var monthArray = [String]()
+    var yearArray = [String]()
+    var dateArray = [String]()
+    
+    var leagueArray = [String]()
+    
     let matchResults = ["win","draw","loss","Cancelled"] // 경기 결과 check를 위한 배열
     var matchResult = [Int]() // 경기 결과 ex) -1 : 아직 진행 안함, 0 : 승, 1 : 무, 2 : 패
     
@@ -55,6 +62,12 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func loadMatchData(start: Int, end: Int) {
+        
+        dayArray.removeAll()
+        monthArray.removeAll()
+        yearArray.removeAll()
+        dateArray.removeAll()
+        leagueArray.removeAll()
         
         scoreTimeArray.removeAll()
         awayTeam.removeAll()
@@ -96,14 +109,53 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
                 count = 0
                 
                 // away Team
-                for content in html.xpath("//table/tbody/tr/td[contains(@class,'team-b')]") {
+                for content in html.xpath("//table/tbody/tr/td[contains(@class,'team-b')]/a") {
                     if (count >= start && count <= end) {
-                        if let away = content.text {
+                        if let away = content["title"] {
                             awayTeam.append("\(away.stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: ""))")
                         }
                         
                     }
                     count++
+                }
+                
+                count = 0
+                
+                //date
+                for content in html.xpath("//table/tbody/tr/td[contains(@class,'full-date')]"){
+                    if (count >= start && count <= end) {
+                        if let date = content.text {
+                            let trimmedDate = date.stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
+                            
+                            print(trimmedDate)
+                            
+                            let day = trimmedDate.componentsSeparatedByString("/")[0]
+                            let month = trimmedDate.componentsSeparatedByString("/")[1]
+                            let year = trimmedDate.componentsSeparatedByString("/")[2]
+                            self.dayArray.append(day)
+                            self.monthArray.append(month)
+                            self.yearArray.append(year)
+                            
+                            self.dateArray.append("20\(year)년 \(month)월 \(day)일")
+                        }
+                    }
+                    
+                    count++
+                }
+                
+                count = 0
+                
+                // league
+                for content in html.xpath("//table/tbody/tr/td[contains(@class,'competition')]/a") {
+                    
+                    if (count >= start && count <= end) {
+                        if let league = content["title"] {
+                            self.leagueArray.append("\(league)")
+                        }
+                    }
+                    
+                    count++
+                    
                 }
                 
                 count = 0
@@ -196,7 +248,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
                             let trimmedTime = time.stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
                             
                             if trimmedTime == "-" {
-                                scoreTimeArray.append("미정")
+                                scoreTimeArray.append("시간미정")
                             } else {
                                 let hour = trimmedTime.componentsSeparatedByString(":")[0]
                                 let min = trimmedTime.componentsSeparatedByString(":")[1]
@@ -243,13 +295,13 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             if matchStatus[indexPath.row] == "ready" {
                 
-                cell.configureCell(scoreTimeArray[indexPath.row], matchResult: nil, matchStatus: matchStatus[indexPath.row], home: homeTeam[indexPath.row], away: awayTeam[indexPath.row], homeScore: nil, awayScore: nil)
+                cell.configureCell(scoreTimeArray[indexPath.row], matchResult: nil, matchStatus: matchStatus[indexPath.row], home: homeTeam[indexPath.row], away: awayTeam[indexPath.row], homeScore: nil, awayScore: nil, date: dateArray[indexPath.row], leagueName: leagueArray[indexPath.row])
             } else {
                 
                 let trimmedScore = scoreTimeArray[indexPath.row].stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
                 let homeScore = Int(trimmedScore.componentsSeparatedByString("-")[0])!
                 let awayScore = Int(trimmedScore.componentsSeparatedByString("-")[1])!
-                cell.configureCell(nil, matchResult: matchResult[indexPath.row], matchStatus: matchStatus[indexPath.row], home: homeTeam[indexPath.row], away: awayTeam[indexPath.row], homeScore: homeScore, awayScore: awayScore)
+                cell.configureCell(nil, matchResult: matchResult[indexPath.row], matchStatus: matchStatus[indexPath.row], home: homeTeam[indexPath.row], away: awayTeam[indexPath.row], homeScore: homeScore, awayScore: awayScore, date: dateArray[indexPath.row], leagueName: leagueArray[indexPath.row])
             }
             
             return cell
