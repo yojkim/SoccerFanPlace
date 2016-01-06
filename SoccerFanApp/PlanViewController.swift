@@ -13,6 +13,8 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var tableView: UITableView!
     
+    var matchData = MatchData()
+    
     var urlString: String? = DataServices.ds.supportTeamURL
     var htmlString: NSString?
     var scoreTimeArray = [String]()
@@ -40,8 +42,13 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         startPoint = DataServices.ds.searchStartPoint
         skipCount = DataServices.ds.skipCount
         
-        print(startPoint)
-        loadMatchData(startPoint, end: startPoint+(5+self.skipCount))
+        self.matchData.startPoint = self.startPoint
+        self.matchData.skipCount = self.skipCount
+        
+        self.removeData()
+        self.matchData.loadMatchData(startPoint, end: startPoint+(5+self.skipCount))
+        self.receiveData()
+        tableView.reloadData()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -55,13 +62,18 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         startPoint = DataServices.ds.searchStartPoint
         skipCount = DataServices.ds.skipCount
-        print(startPoint)
-        loadMatchData(startPoint, end: startPoint+(5+self.skipCount))
+        
+        self.matchData.startPoint = self.startPoint
+        self.matchData.skipCount = self.skipCount
+        
+        self.removeData()
+        self.matchData.loadMatchData(startPoint, end: startPoint+(5+self.skipCount))
+        self.receiveData()
         tableView.reloadData()
         super.viewDidAppear(true)
     }
     
-    func loadMatchData(start: Int, end: Int) {
+    func removeData() {
         
         dayArray.removeAll()
         monthArray.removeAll()
@@ -74,211 +86,22 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         homeTeam.removeAll()
         matchStatus.removeAll()
         matchResult.removeAll()
+    }
+    
+    func receiveData(){
+        scoreTimeArray = self.matchData.scoreTimeArray
+        matchStatus = self.matchData.matchStatus
         
-        var count = 0
-        var totalCount = 0 // scoreTimeArray Count
-        let url: NSURL!
-        if let temp = urlString {
-            print("\(temp)matches")
-            url = NSURL(string: "\(temp)matches/")
-        } else {
-            url = NSURL(string: "http://kr.soccerway.com/teams/england/manchester-city-football-club/676/matchesasdf")
-        }
+        homeTeam = self.matchData.homeTeam
+        awayTeam = self.matchData.awayTeam
         
-        do {
-            self.htmlString = try NSString(contentsOfURL: url!, encoding: NSUTF8StringEncoding)
-            
-            if let html = Kanna.HTML(html: htmlString as! String, encoding: NSUTF8StringEncoding) {
-                
-                count = 0
-                
-                // home Team
-                for content in html.xpath("//table/tbody/tr/td[contains(@class,'team-a')]/a") {
-                    if (count >= start && count <= end) {
-                        
-                        if let home = content["title"] {
-                            homeTeam.append("\(home)")
-                        }
-                        
-                    }
-                    
-                    count++
-            
-                }
-                
-                count = 0
-                
-                // away Team
-                for content in html.xpath("//table/tbody/tr/td[contains(@class,'team-b')]/a") {
-                    if (count >= start && count <= end) {
-                        if let away = content["title"] {
-                            awayTeam.append("\(away.stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: ""))")
-                        }
-                        
-                    }
-                    count++
-                }
-                
-                count = 0
-                
-                //date
-                for content in html.xpath("//table/tbody/tr/td[contains(@class,'full-date')]"){
-                    if (count >= start && count <= end) {
-                        if let date = content.text {
-                            let trimmedDate = date.stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
-                            
-                            print(trimmedDate)
-                            
-                            let day = trimmedDate.componentsSeparatedByString("/")[0]
-                            let month = trimmedDate.componentsSeparatedByString("/")[1]
-                            let year = trimmedDate.componentsSeparatedByString("/")[2]
-                            self.dayArray.append(day)
-                            self.monthArray.append(month)
-                            self.yearArray.append(year)
-                            
-                            self.dateArray.append("20\(year)년 \(month)월 \(day)일")
-                        }
-                    }
-                    
-                    count++
-                }
-                
-                count = 0
-                
-                // league
-                for content in html.xpath("//table/tbody/tr/td[contains(@class,'competition')]/a") {
-                    
-                    if (count >= start && count <= end) {
-                        if let league = content["title"] {
-                            self.leagueArray.append("\(league)")
-                        }
-                    }
-                    
-                    count++
-                    
-                }
-                
-                count = 0
-                
-                // score
-                /*for content in html.xpath("//td[contains(@class,'score-time score')]/a") {
-                    if (count >= start && count <= end) {
-                        
-                        if let score = content.innerHTML {
-                            scoreTimeArray.append("\(score)")
-                            matchStatus.append("done")
-                        }
-                        
-                        for (index, result) in matchResults.enumerate() {
-                            print(index)
-                            if let outcome = content["class"] {
-                                if "\(outcome)" == "result-\(result)" || "\(outcome)" == "\(result)" {
-                                    matchResult.append(index)
-                                }
-                            }
-                        }
-                        
-                    }
-                    
-                    count++
-                }*/
-                
-                for content in html.xpath("//td[contains(@class,'score-time')]/a") {
-                    if start == 44-(self.skipCount) {
-                        if (count >= start && count <= DataServices.ds.lastIndex) {
-                            
-                            if let score = content.innerHTML {
-                                let trimmedScore = score.stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
-                                if trimmedScore == "CANC" {
-                                    homeTeam.removeAtIndex(totalCount)
-                                    awayTeam.removeAtIndex(totalCount)
-                                } else {
-                                    scoreTimeArray.append("\(score)")
-                                    matchStatus.append("done")
-                                }
-                                totalCount++
-                            }
-                            
-                            for (index, result) in matchResults.enumerate() {
-                                print(index)
-                                if let outcome = content["class"] {
-                                    if "\(outcome)" == "result-\(result)" || "\(outcome)" == "\(result)" {
-                                        matchResult.append(index)
-                                    }
-                                }
-                            }
-                            
-                        }
-                    } else {
-                        if (count >= start && count < start+(2+self.skipCount)) {
-                            
-                            if let score = content.innerHTML {
-                                let trimmedScore = score.stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
-                                if trimmedScore == "CANC" {
-                                    homeTeam.removeAtIndex(totalCount)
-                                    awayTeam.removeAtIndex(totalCount)
-                                } else {
-                                    scoreTimeArray.append("\(score)")
-                                    matchStatus.append("done")
-                                }
-                                totalCount++
-                            }
-                            
-                            for (index, result) in matchResults.enumerate() {
-                                print(index)
-                                if let outcome = content["class"] {
-                                    if "\(outcome)" == "result-\(result)" || "\(outcome)" == "\(result)" {
-                                        matchResult.append(index)
-                                    }
-                                }
-                            }
-                            
-                        }
-                    }
-                    
-                    count++
-                }
-                
-                count = start-(startPoint+2+self.skipCount)-self.skipCount
-                
-                // time
-                for content in html.xpath("//td[contains(@class,'status')]/a") {
-                    if (count >= start-(startPoint+2+self.skipCount) && count < end-(startPoint+2+self.skipCount)-self.skipCount-1) {
-                        if let time = content.text {
-                            let trimmedTime = time.stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
-                            
-                            if trimmedTime == "-" {
-                                scoreTimeArray.append("시간미정")
-                            } else {
-                                let hour = trimmedTime.componentsSeparatedByString(":")[0]
-                                let min = trimmedTime.componentsSeparatedByString(":")[1]
-                                print(hour)
-                                var koreanHour = Int(hour)!+8
-                                if koreanHour >= 24 {
-                                    koreanHour = koreanHour - 24
-                                }
-                        
-                                if koreanHour <= 9 {
-                                    scoreTimeArray.append("0\(koreanHour):\(min)")
-                                } else {
-                                    scoreTimeArray.append("\(koreanHour):\(min)")
-                                }
-                            }
-                        
-                            matchStatus.append("ready")
-                            matchResult.append(-1)
-                        }
-                    } else if count >= end-(startPoint+2+self.skipCount)-self.skipCount {
-                        break
-                    }
-                    
-                    count++
-                }
-            }
-            
-        } catch {
-            print("error")
-        }
+        dayArray = self.matchData.dayArray
+        monthArray = self.matchData.monthArray
+        yearArray = self.matchData.yearArray
+        dateArray = self.matchData.dateArray
+        
+        leagueArray = self.matchData.leagueArray
+        matchResult = self.matchData.matchResult
         
     }
     

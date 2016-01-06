@@ -12,8 +12,8 @@ class RankViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet var tableView: UITableView!
     
-    var leagueArray = ["프리미어리그(ENG)","챔피온십리그(ENG)","프리메라리가(ESP)","분데스리가(GER)","세리에A(ITA)","에레데비지에(NED)","리그1(FRA)","프리메이라리가(POR)"]
-    var leagueUrlArray = ["http://m.sports.naver.com/wfootball/record/index.nhn","http://kr.soccerway.com/national/england/championship/20152016/regular-season/r31555/","http://m.sports.naver.com/wfootball/record/index.nhn?category=primera&year=2015","http://m.sports.naver.com/wfootball/record/index.nhn?category=bundesliga&year=2015","http://m.sports.naver.com/wfootball/record/index.nhn?category=seria&year=2015","http://m.sports.naver.com/wfootball/record/index.nhn?category=eredivisie&year=2015","http://m.sports.naver.com/wfootball/record/index.nhn?category=ligue1&year=2015","http://kr.soccerway.com/national/portugal/portuguese-liga-/20152016/regular-season/r31637/"]
+    var leagueArray = ["프리미어리그(ENG)","챔피온십리그(ENG)","프리메라리가(ESP)","분데스리가(GER)","세리에A(ITA)","에레데비지에(NED)","리그1(FRA)","프리메이라리가(POR)", "K리그클래식(KOR)"]
+    var leagueUrlArray = ["http://m.sports.naver.com/wfootball/record/index.nhn","http://kr.soccerway.com/national/england/championship/20152016/regular-season/r31555/","http://m.sports.naver.com/wfootball/record/index.nhn?category=primera&year=2015","http://m.sports.naver.com/wfootball/record/index.nhn?category=bundesliga&year=2015","http://m.sports.naver.com/wfootball/record/index.nhn?category=seria&year=2015","http://m.sports.naver.com/wfootball/record/index.nhn?category=eredivisie&year=2015","http://m.sports.naver.com/wfootball/record/index.nhn?category=ligue1&year=2015","http://kr.soccerway.com/national/portugal/portuguese-liga-/20152016/regular-season/r31637/","http://m.sports.naver.com/kfootball/record/index.nhn"]
     var countryArray = ["ENG","ENG","ESP","GER","ITA","NED","FRA","POR","KOR"]
     
     let transitionManager = TransitionManager()

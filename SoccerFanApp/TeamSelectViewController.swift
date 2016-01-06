@@ -28,7 +28,6 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         loadSoccerTeamData()
-        
         sortTeamDictionary()
         //sortedTeamArray = teamArray.sort { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
         super.viewDidLoad()

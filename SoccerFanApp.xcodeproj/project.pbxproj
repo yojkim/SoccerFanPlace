@@ -19,6 +19,8 @@
 		A640417B1C179247003D06B4 /* RankDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640417A1C179247003D06B4 /* RankDetailViewController.swift */; };
 		A640417D1C179A2E003D06B4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640417C1C179A2E003D06B4 /* TransitionManager.swift */; };
 		A64041831C17A28B003D06B4 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64041821C17A28B003D06B4 /* RankViewController.swift */; };
+		A64BB2CE1C3AC925006D3436 /* LEDBDREV.TTF in Resources */ = {isa = PBXBuildFile; fileRef = A64BB2CD1C3AC925006D3436 /* LEDBDREV.TTF */; };
+		A6945F3A1C3CAEF9001E411D /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6945F391C3CAEF9001E411D /* MatchData.swift */; };
 		A6FBAFBC1C16C09A007735A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBAFBB1C16C09A007735A3 /* AppDelegate.swift */; };
 		A6FBAFC11C16C09A007735A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FBAFBF1C16C09A007735A3 /* Main.storyboard */; };
 		A6FBAFC31C16C09A007735A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FBAFC21C16C09A007735A3 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		A640417A1C179247003D06B4 /* RankDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankDetailViewController.swift; sourceTree = "<group>"; };
 		A640417C1C179A2E003D06B4 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		A64041821C17A28B003D06B4 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
+		A64BB2CD1C3AC925006D3436 /* LEDBDREV.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = LEDBDREV.TTF; sourceTree = "<group>"; };
+		A6945F391C3CAEF9001E411D /* MatchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
 		A6FBAFB81C16C09A007735A3 /* SoccerFanApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerFanApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FBAFBB1C16C09A007735A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FBAFC01C16C09A007735A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		A6FBAFCF1C16C31E007735A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A6945F391C3CAEF9001E411D /* MatchData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 		A6FBAFD01C16C33C007735A3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A64BB2CD1C3AC925006D3436 /* LEDBDREV.TTF */,
 				A6FBAFD71C16D419007735A3 /* NanumBarunpenR.ttf */,
 				A6FBAFD81C16D419007735A3 /* NanumBarunpenB.ttf */,
 				A6FBAFC21C16C09A007735A3 /* Assets.xcassets */,
@@ -248,6 +254,7 @@
 			files = (
 				A6FBAFD61C16C437007735A3 /* Launch Screen.storyboard in Resources */,
 				A6FBAFC31C16C09A007735A3 /* Assets.xcassets in Resources */,
+				A64BB2CE1C3AC925006D3436 /* LEDBDREV.TTF in Resources */,
 				A6FBAFD91C16D419007735A3 /* NanumBarunpenR.ttf in Resources */,
 				A6FBAFDA1C16D419007735A3 /* NanumBarunpenB.ttf in Resources */,
 				A6FBAFC11C16C09A007735A3 /* Main.storyboard in Resources */,
@@ -311,6 +318,7 @@
 			files = (
 				A60479D41C2713D500396648 /* MatchCell.swift in Sources */,
 				A640417D1C179A2E003D06B4 /* TransitionManager.swift in Sources */,
+				A6945F3A1C3CAEF9001E411D /* MatchData.swift in Sources */,
 				A625BC741C1D6D0E00541CD3 /* DataServices.swift in Sources */,
 				A6FBAFE21C170EF4007735A3 /* SettingViewController.swift in Sources */,
 				A64041831C17A28B003D06B4 /* RankViewController.swift in Sources */,
