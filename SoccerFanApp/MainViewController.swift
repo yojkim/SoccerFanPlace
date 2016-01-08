@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
     var skipCount: Int!
 
     override func viewDidLoad() {
-        self.loadData()
+        self.loadRankData()
         
         startPoint = DataServices.ds.searchStartPoint
         skipCount = DataServices.ds.skipCount
@@ -45,7 +45,11 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         urlString = "\(DataServices.ds.supportTeamURL)/statistics"
-        self.loadData()
+        self.loadRankData()
+        
+        startPoint = DataServices.ds.searchStartPoint
+        skipCount = DataServices.ds.skipCount
+        
         self.matchData.startPoint = self.startPoint
         self.matchData.skipCount = self.skipCount
         
@@ -59,6 +63,8 @@ class MainViewController: UIViewController {
         
         let home = self.matchData.recentHomeScore
         let away = self.matchData.recentAwayScore
+        print(home)
+        print(away)
         
         self.rankLable.text = self.supportTeamRank
         self.leagueLabel.text = self.matchData.recentLeague
@@ -93,7 +99,7 @@ class MainViewController: UIViewController {
         }
     }
         
-    func loadData() {
+    func loadRankData() {
         let url = NSURL(string: urlString)!
         do {
             self.htmlString = try NSString(contentsOfURL: url, encoding: NSUTF8StringEncoding)

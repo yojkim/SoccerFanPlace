@@ -43,14 +43,11 @@ class DataServices {
         }
     }
     
-    private var _supportTeam: NSString {
+    private var _supportTeam: NSString? {
         get {
-            var tempString: NSString? = NSUserDefaults.standardUserDefaults().objectForKey("supportTeam") as? NSString
-            if tempString == nil {
-                tempString = "팀을 선택해주세요."
-            }
+            let tempString: NSString? = NSUserDefaults.standardUserDefaults().objectForKey("supportTeam") as? NSString
             
-            return tempString!
+            return tempString
         }
         
         set(newValue) {
@@ -161,7 +158,7 @@ class DataServices {
         }
     }
     
-    var supportTeam: NSString {
+    var supportTeam: NSString? {
         get {
             return _supportTeam
         }

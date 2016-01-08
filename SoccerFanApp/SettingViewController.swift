@@ -33,7 +33,7 @@ class SettingViewController: UITableViewController, MFMailComposeViewControllerD
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.teamLbl.text = "\(DataServices.ds.supportTeam)"
+        self.teamLbl.text = "\(DataServices.ds.supportTeam!)"
         let window = UIApplication.sharedApplication().delegate!.window!!
         window.addSubview(navigationView)
     }
@@ -47,7 +47,7 @@ class SettingViewController: UITableViewController, MFMailComposeViewControllerD
             self.performSegueWithIdentifier("LeagueSelectSegue", sender: nil)
             
         // mail to youthful2016@gmail.com
-        } else if (indexPath.section == 2 && indexPath.row == 1) {
+        } else if (indexPath.section == 1 && indexPath.row == 1) {
             let mailComposeViewController = configureMailComposeViewController()
             if MFMailComposeViewController.canSendMail() {
                 self.presentViewController(mailComposeViewController, animated: true, completion: nil)

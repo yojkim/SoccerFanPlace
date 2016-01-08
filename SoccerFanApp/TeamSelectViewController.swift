@@ -41,8 +41,10 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func confirmButtonPressed(sender: AnyObject) {
-        DataServices.ds.isFirstime = false
-        self.performSegueWithIdentifier("MainViewSegue", sender: nil)
+        if DataServices.ds.supportTeam != nil && DataServices.ds.supportTeam != "" {
+            DataServices.ds.isFirstime = false
+            self.performSegueWithIdentifier("MainViewSegue", sender: nil)
+        }
         
     }
     

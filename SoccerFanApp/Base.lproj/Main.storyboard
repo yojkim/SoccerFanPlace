@@ -16,7 +16,6 @@
             <string>NanumBarunpen-Bold</string>
             <string>NanumBarunpen-Bold</string>
             <string>NanumBarunpen-Bold</string>
-            <string>NanumBarunpen-Bold</string>
         </mutableArray>
         <mutableArray key="NanumBarunpenR.ttf">
             <string>NanumBarunpen</string>
@@ -676,43 +675,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="알림" id="Ngh-WM-wzf">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rkZ-wQ-fXl">
-                                        <rect key="frame" x="0.0" y="219.5" width="600" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rkZ-wQ-fXl" id="HOe-Sc-w3H">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="응원팀 경기 알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ2-Vu-lqG">
-                                                    <rect key="frame" x="27" y="8" width="183" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="183" id="2Xt-vt-3So"/>
-                                                        <constraint firstAttribute="height" constant="35" id="kmA-l0-Xvq"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYI-oq-0RD">
-                                                    <rect key="frame" x="528" y="11" width="51" height="31"/>
-                                                </switch>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="RYI-oq-0RD" firstAttribute="centerY" secondItem="HOe-Sc-w3H" secondAttribute="centerY" id="CZi-eL-h6Y"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="RYI-oq-0RD" secondAttribute="trailing" constant="15" id="E1Y-SH-TS6"/>
-                                                <constraint firstItem="oZ2-Vu-lqG" firstAttribute="leading" secondItem="HOe-Sc-w3H" secondAttribute="leadingMargin" constant="19" id="LQB-Cz-FWr"/>
-                                                <constraint firstItem="oZ2-Vu-lqG" firstAttribute="centerY" secondItem="HOe-Sc-w3H" secondAttribute="centerY" id="a07-3y-C1J"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="정보" id="Tfb-HT-rBG">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LIO-aa-QC3">
-                                        <rect key="frame" x="0.0" y="321.5" width="600" height="52"/>
+                                        <rect key="frame" x="0.0" y="219.5" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LIO-aa-QC3" id="XVV-mo-TmQ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
@@ -760,7 +726,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="C1e-sA-cCd">
-                                        <rect key="frame" x="0.0" y="373.5" width="600" height="52"/>
+                                        <rect key="frame" x="0.0" y="271.5" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C1e-sA-cCd" id="Wit-t7-YRn">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="51.5"/>
@@ -800,7 +766,6 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="navigationView" destination="fHC-mS-x2c" id="8GH-qA-cDo"/>
-                        <outlet property="notiSwitch" destination="RYI-oq-0RD" id="4it-hK-eM9"/>
                         <outlet property="teamLbl" destination="lMe-Jj-AEb" id="rBX-jl-TSS"/>
                         <segue destination="qmq-u8-DdD" kind="show" identifier="LeagueSelectSegue" id="V4h-I7-oTi"/>
                     </connections>
@@ -1527,7 +1492,7 @@
                                             <constraint firstAttribute="width" constant="46" id="wdo-A4-dff"/>
                                             <constraint firstAttribute="height" constant="30" id="yzA-jI-SPc"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
                                         <state key="normal" title="완료">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>

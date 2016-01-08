@@ -66,6 +66,7 @@ class MatchData: NSObject, NSURLConnectionDataDelegate {
         var totalCount = 0 // scoreTimeArray Count
         let url: NSURL!
         if let temp = urlString {
+            print(temp)
             url = NSURL(string: "\(temp)matches/")
         } else {
             url = NSURL(string: "http://kr.soccerway.com/teams/england/manchester-city-football-club/676/matchesasdf")
@@ -113,10 +114,8 @@ class MatchData: NSObject, NSURLConnectionDataDelegate {
                 for content in html.xpath("//div[contains(@class,'table-container')]/table[contains(@class,'matches')]/tbody/tr") {
                     if (count >= start && count <= end) {
                         if let timeStamp = content["data-timestamp"] {
-                            print(timeStamp)
                             let date = NSDate(timeIntervalSince1970: Double(timeStamp)!)
                             let dateString = formatter.stringFromDate(date)
-                            print(dateString)
                             
                             let day = dateString.componentsSeparatedByString("/")[2]
                             let month = dateString.componentsSeparatedByString("/")[1]
@@ -125,7 +124,6 @@ class MatchData: NSObject, NSURLConnectionDataDelegate {
                             self.monthArray.append(month)
                             self.yearArray.append(year)
                             
-                            print("\(year)년 \(month)월 \(day)일")
                             self.dateArray.append("\(year)년 \(month)월 \(day)일")
                         }
                     }
