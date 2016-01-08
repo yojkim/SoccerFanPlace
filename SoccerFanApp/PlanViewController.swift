@@ -111,11 +111,6 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = self.tableView.dequeueReusableCellWithIdentifier("MatchCell") as? MatchCell {
-            print(indexPath.row)
-            
-            for index in scoreTimeArray {
-                print(index)
-            }
             if matchStatus[indexPath.row] == "ready" {
                 
                 cell.configureCell(scoreTimeArray[indexPath.row], matchResult: nil, matchStatus: matchStatus[indexPath.row], home: homeTeam[indexPath.row], away: awayTeam[indexPath.row], homeScore: nil, awayScore: nil, date: dateArray[indexPath.row], leagueName: leagueArray[indexPath.row])

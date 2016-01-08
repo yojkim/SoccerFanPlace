@@ -9,7 +9,7 @@
 import Foundation
 import Kanna
 
-class MatchData {
+class MatchData: NSObject, NSURLConnectionDataDelegate {
     
     var urlString: String? = DataServices.ds.supportTeamURL
     var htmlString: NSString?
@@ -42,8 +42,6 @@ class MatchData {
     var recentLeague: String!
     var recentMatchResult: Int!
     
-    
-    
     private func removeData() {
         
         dayArray.removeAll()
@@ -63,11 +61,11 @@ class MatchData {
         
         self.removeData()
         
+        urlString = DataServices.ds.supportTeamURL
         var count = 0
         var totalCount = 0 // scoreTimeArray Count
         let url: NSURL!
         if let temp = urlString {
-            print("\(temp)matches")
             url = NSURL(string: "\(temp)matches/")
         } else {
             url = NSURL(string: "http://kr.soccerway.com/teams/england/manchester-city-football-club/676/matchesasdf")
@@ -109,13 +107,39 @@ class MatchData {
                 
                 count = 0
                 
+                //timestamp to nsdate
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "yyyy/MM/dd/HH/mm"
+                for content in html.xpath("//div[contains(@class,'table-container')]/table[contains(@class,'matches')]/tbody/tr") {
+                    if (count >= start && count <= end) {
+                        if let timeStamp = content["data-timestamp"] {
+                            print(timeStamp)
+                            let date = NSDate(timeIntervalSince1970: Double(timeStamp)!)
+                            let dateString = formatter.stringFromDate(date)
+                            print(dateString)
+                            
+                            let day = dateString.componentsSeparatedByString("/")[2]
+                            let month = dateString.componentsSeparatedByString("/")[1]
+                            let year = dateString.componentsSeparatedByString("/")[0]
+                            self.dayArray.append(day)
+                            self.monthArray.append(month)
+                            self.yearArray.append(year)
+                            
+                            print("\(year)년 \(month)월 \(day)일")
+                            self.dateArray.append("\(year)년 \(month)월 \(day)일")
+                        }
+                    }
+                    count++
+                }
+                
+                count = 0
+                /*
                 //date
                 for content in html.xpath("//table/tbody/tr/td[contains(@class,'full-date')]"){
                     if (count >= start && count <= end) {
                         if let date = content.text {
                             let trimmedDate = date.stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
                             
-                            print(trimmedDate)
                             
                             let day = trimmedDate.componentsSeparatedByString("/")[0]
                             let month = trimmedDate.componentsSeparatedByString("/")[1]
@@ -129,7 +153,7 @@ class MatchData {
                     }
                     
                     count++
-                }
+                }*/
                 
                 count = 0
                 
@@ -162,13 +186,12 @@ class MatchData {
                                 } else {
                                     scoreTimeArray.append("\(score)")
                                     matchStatus.append("done")
-                                    self.recentMatchIndex = count
+                                    self.recentMatchIndex = totalCount
                                 }
                                 totalCount++
                             }
                             
                             for (index, result) in matchResults.enumerate() {
-                                print(index)
                                 if let outcome = content["class"] {
                                     if "\(outcome)" == "result-\(result)" || "\(outcome)" == "\(result)" {
                                         matchResult.append(index)
@@ -188,13 +211,12 @@ class MatchData {
                                 } else {
                                     scoreTimeArray.append("\(score)")
                                     matchStatus.append("done")
-                                    self.recentMatchIndex = count
+                                    self.recentMatchIndex = totalCount
                                 }
                                 totalCount++
                             }
                             
                             for (index, result) in matchResults.enumerate() {
-                                print(index)
                                 if let outcome = content["class"] {
                                     if "\(outcome)" == "result-\(result)" || "\(outcome)" == "\(result)" {
                                         matchResult.append(index)
@@ -221,7 +243,6 @@ class MatchData {
                             } else {
                                 let hour = trimmedTime.componentsSeparatedByString(":")[0]
                                 let min = trimmedTime.componentsSeparatedByString(":")[1]
-                                print(hour)
                                 var koreanHour = Int(hour)!+8
                                 if koreanHour >= 24 {
                                     koreanHour = koreanHour - 24
@@ -256,8 +277,8 @@ class MatchData {
     func saveRecentMatch() {
         self.recentHomeTeam = self.homeTeam[recentMatchIndex]
         self.recentAwayTeam = self.awayTeam[recentMatchIndex]
-        self.recentHomeScore = self.scoreTimeArray[recentMatchIndex].componentsSeparatedByString("-")[0]
-        self.recentAwayScore = self.scoreTimeArray[recentMatchIndex].componentsSeparatedByString("-")[1]
+        self.recentHomeScore = self.scoreTimeArray[recentMatchIndex].componentsSeparatedByString("-")[0].stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
+        self.recentAwayScore = self.scoreTimeArray[recentMatchIndex].componentsSeparatedByString("-")[1].stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
         self.recentMatchResult = self.matchResult[recentMatchIndex]
         self.recentLeague = self.leagueArray[recentMatchIndex]
     }

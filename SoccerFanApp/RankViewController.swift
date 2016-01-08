@@ -30,6 +30,8 @@ class RankViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let indexPath = self.tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
+        
+        self.tableView.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

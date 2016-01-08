@@ -16,6 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let introViewController = storyboard.instantiateViewControllerWithIdentifier("IntroViewController") as? IntroViewController
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainTabBarController") as? UITabBarController
+    
+        if DataServices.ds.isFirstime {
+            self.window?.rootViewController = introViewController
+        } else {
+            self.window?.rootViewController = mainViewController
+        }
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

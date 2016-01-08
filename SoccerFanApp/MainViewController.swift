@@ -29,7 +29,6 @@ class MainViewController: UIViewController {
     var skipCount: Int!
 
     override func viewDidLoad() {
-        
         self.loadData()
         
         startPoint = DataServices.ds.searchStartPoint
@@ -41,6 +40,18 @@ class MainViewController: UIViewController {
         self.matchData.loadMatchData(startPoint, end: startPoint+(5+self.skipCount))
         
         super.viewDidLoad()
+        self.receiveData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        urlString = "\(DataServices.ds.supportTeamURL)/statistics"
+        self.loadData()
+        self.matchData.startPoint = self.startPoint
+        self.matchData.skipCount = self.skipCount
+        
+        self.matchData.loadMatchData(startPoint, end: startPoint+(5+self.skipCount))
+        super.viewDidAppear(true)
+        
         self.receiveData()
     }
     

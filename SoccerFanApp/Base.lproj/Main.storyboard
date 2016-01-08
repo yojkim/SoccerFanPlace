@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tFd-9z-nEI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -14,8 +14,14 @@
             <string>NanumBarunpen-Bold</string>
             <string>NanumBarunpen-Bold</string>
             <string>NanumBarunpen-Bold</string>
+            <string>NanumBarunpen-Bold</string>
+            <string>NanumBarunpen-Bold</string>
+            <string>NanumBarunpen-Bold</string>
         </mutableArray>
         <mutableArray key="NanumBarunpenR.ttf">
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
+            <string>NanumBarunpen</string>
             <string>NanumBarunpen</string>
             <string>NanumBarunpen</string>
             <string>NanumBarunpen</string>
@@ -123,13 +129,13 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="146" id="qym-e6-rAH"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="71"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="AEG-Ea-BjM"/>
                                                         <exclude reference="G22-95-9jq"/>
                                                         <exclude reference="iXH-DW-TM2"/>
-                                                        <exclude reference="AEG-Ea-BjM"/>
                                                         <exclude reference="qym-e6-rAH"/>
                                                     </mask>
                                                 </variation>
@@ -197,8 +203,8 @@
                                                         <nil key="highlightedColor"/>
                                                         <variation key="default">
                                                             <mask key="constraints">
-                                                                <exclude reference="jmt-6U-fYJ"/>
                                                                 <exclude reference="d4X-Xf-TbR"/>
+                                                                <exclude reference="jmt-6U-fYJ"/>
                                                             </mask>
                                                         </variation>
                                                     </label>
@@ -214,8 +220,8 @@
                                                         <nil key="highlightedColor"/>
                                                         <variation key="default">
                                                             <mask key="constraints">
-                                                                <exclude reference="wkG-ej-alS"/>
                                                                 <exclude reference="FOL-Dw-hjz"/>
+                                                                <exclude reference="wkG-ej-alS"/>
                                                             </mask>
                                                         </variation>
                                                     </label>
@@ -527,7 +533,7 @@
                                                         <constraint firstAttribute="width" constant="154" id="44F-AW-HSD"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프리리" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="YYC-7G-elJ">
@@ -537,7 +543,7 @@
                                                         <constraint firstAttribute="height" constant="22" id="wqC-Ik-dK2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1090,12 +1096,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z99-LN-cLO">
-                                                    <rect key="frame" x="22" y="19" width="269" height="34"/>
+                                                    <rect key="frame" x="22" y="19" width="215" height="34"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="프리미어리그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-1p-5Hg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="224" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="170" height="34"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="224" id="4nH-Fd-yjz"/>
+                                                                <constraint firstAttribute="width" constant="170" id="4nH-Fd-yjz"/>
                                                                 <constraint firstAttribute="height" constant="34" id="bUG-Ue-NH1"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
@@ -1103,7 +1109,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="KOR" translatesAutoresizingMaskIntoConstraints="NO" id="dSQ-xv-EfI" customClass="CountryImage" customModule="SoccerFanApp" customModuleProvider="target">
-                                                            <rect key="frame" x="224" y="0.0" width="45" height="34"/>
+                                                            <rect key="frame" x="170" y="0.0" width="45" height="34"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="45" id="eZL-ky-Qe0"/>
                                                                 <constraint firstAttribute="height" constant="32" id="kV4-m3-dct"/>
@@ -1288,7 +1294,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="EkU-mU-jfu">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tFd-9z-nEI" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tFd-9z-nEI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="IhU-w6-1LC">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1305,11 +1311,340 @@
             </objects>
             <point key="canvasLocation" x="266" y="429"/>
         </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="dNm-hR-7ib">
+            <objects>
+                <viewController storyboardIdentifier="IntroViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AEA-HT-bbr" customClass="IntroViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SyF-Pe-g9j"/>
+                        <viewControllerLayoutGuide type="bottom" id="T33-31-zBs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cKw-Ab-Rch">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKq-M5-aoP" customClass="MaterialButton" customModule="SoccerFanApp" customModuleProvider="target">
+                                <rect key="frame" x="218" y="510" width="164" height="45"/>
+                                <color key="backgroundColor" red="0.25320859998512829" green="0.6425681089743589" blue="0.10363458929197501" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Nec-Q1-fbo"/>
+                                    <constraint firstAttribute="width" constant="164" id="X1M-Rb-dw3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="16"/>
+                                <state key="normal" title="응원 팀 설정하기"/>
+                                <connections>
+                                    <action selector="supportTeamButtonPressed:" destination="AEA-HT-bbr" eventType="touchUpInside" id="tip-fg-0et"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Intro" translatesAutoresizingMaskIntoConstraints="NO" id="MqE-kR-Ozs">
+                                <rect key="frame" x="142" y="237" width="316" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="316" id="Rk1-pq-gxn"/>
+                                    <constraint firstAttribute="height" constant="125" id="o7U-eH-wpa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="T33-31-zBs" firstAttribute="top" secondItem="GKq-M5-aoP" secondAttribute="bottom" constant="45" id="496-H6-PvA"/>
+                            <constraint firstItem="GKq-M5-aoP" firstAttribute="centerX" secondItem="cKw-Ab-Rch" secondAttribute="centerX" id="I5A-nw-tHt"/>
+                            <constraint firstItem="MqE-kR-Ozs" firstAttribute="centerY" secondItem="cKw-Ab-Rch" secondAttribute="centerY" id="lcF-uG-wlG"/>
+                            <constraint firstItem="MqE-kR-Ozs" firstAttribute="centerX" secondItem="cKw-Ab-Rch" secondAttribute="centerX" id="r6W-67-wvx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Eu2-Td-wzw" kind="presentation" identifier="LeagueSelectSegue" id="Mep-X1-W95"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8J-ji-ahZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2138" y="429"/>
+        </scene>
+        <!--League Select View Controller-->
+        <scene sceneID="v02-J7-NeT">
+            <objects>
+                <viewController id="Eu2-Td-wzw" customClass="LeagueSelectViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ii3-mj-GQQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="tot-4e-8Rx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NJ6-Ky-oHd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVe-1b-MQg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리그 선택" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhj-jR-7tp">
+                                        <rect key="frame" x="210" y="21" width="181" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="181" id="UAc-4n-T5J"/>
+                                            <constraint firstAttribute="height" constant="36" id="on3-d4-6PK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="JUQ-cH-wZ6"/>
+                                    <constraint firstItem="Yhj-jR-7tp" firstAttribute="centerX" secondItem="IVe-1b-MQg" secondAttribute="centerX" id="OHB-5b-5yn"/>
+                                    <constraint firstItem="Yhj-jR-7tp" firstAttribute="top" secondItem="IVe-1b-MQg" secondAttribute="top" constant="21" id="Q5z-lb-Nt5"/>
+                                    <constraint firstItem="Yhj-jR-7tp" firstAttribute="centerX" secondItem="IVe-1b-MQg" secondAttribute="centerX" id="qSQ-Xu-rmX"/>
+                                    <constraint firstItem="Yhj-jR-7tp" firstAttribute="top" secondItem="IVe-1b-MQg" secondAttribute="top" constant="21" id="utU-sz-7PR"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OHB-5b-5yn"/>
+                                        <exclude reference="utU-sz-7PR"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WJ9-oK-w6x">
+                                <rect key="frame" x="0.0" y="68" width="600" height="532"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="04F-9B-cjX">
+                                    <rect key="frame" x="0.0" y="88" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LeagueCell" rowHeight="60" id="Nig-BY-Wc4" customClass="LeagueCell" customModule="SoccerFanApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nig-BY-Wc4" id="TCR-Dw-k82">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4a9-6A-19S">
+                                                    <rect key="frame" x="33" y="14" width="251" height="32"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프리미어리그(ENG)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zr-OU-a5z">
+                                                            <rect key="frame" x="0.0" y="0.0" width="202" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="ESL-g9-cdd"/>
+                                                                <constraint firstAttribute="width" constant="202" id="oEc-WP-7fA"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KOR" translatesAutoresizingMaskIntoConstraints="NO" id="oSh-ND-FH7" customClass="CountryImage" customModule="SoccerFanApp" customModuleProvider="target">
+                                                            <rect key="frame" x="206" y="0.0" width="45" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="OtE-vS-K5d"/>
+                                                                <constraint firstAttribute="width" constant="45" id="mf2-5A-0Fi"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4a9-6A-19S" firstAttribute="centerY" secondItem="TCR-Dw-k82" secondAttribute="centerY" id="0Ab-NG-a6f"/>
+                                                <constraint firstItem="4a9-6A-19S" firstAttribute="leading" secondItem="TCR-Dw-k82" secondAttribute="leadingMargin" constant="25" id="tKY-sN-NKZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countryImage" destination="oSh-ND-FH7" id="c3L-EO-uTV"/>
+                                            <outlet property="leagueLbl" destination="1Zr-OU-a5z" id="VZb-b4-C8c"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tot-4e-8Rx" firstAttribute="top" secondItem="WJ9-oK-w6x" secondAttribute="bottom" id="1Tx-CV-ua7"/>
+                            <constraint firstItem="WJ9-oK-w6x" firstAttribute="top" secondItem="IVe-1b-MQg" secondAttribute="bottom" id="9q2-HO-rJZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IVe-1b-MQg" secondAttribute="trailing" constant="-20" id="BgB-RZ-Yhb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WJ9-oK-w6x" secondAttribute="trailing" constant="-20" id="Fub-3N-GnA"/>
+                            <constraint firstItem="IVe-1b-MQg" firstAttribute="top" secondItem="NJ6-Ky-oHd" secondAttribute="topMargin" id="GJJ-bg-oae"/>
+                            <constraint firstItem="IVe-1b-MQg" firstAttribute="leading" secondItem="NJ6-Ky-oHd" secondAttribute="leadingMargin" constant="-20" id="Glw-bq-gCS"/>
+                            <constraint firstItem="WJ9-oK-w6x" firstAttribute="leading" secondItem="NJ6-Ky-oHd" secondAttribute="leadingMargin" constant="-20" id="b5w-ff-tSh"/>
+                            <constraint firstItem="WJ9-oK-w6x" firstAttribute="leading" secondItem="NJ6-Ky-oHd" secondAttribute="leadingMargin" constant="-20" id="gMn-8N-hIB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WJ9-oK-w6x" secondAttribute="trailing" constant="-20" id="vOa-Gb-OEQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Fub-3N-GnA"/>
+                                <exclude reference="b5w-ff-tSh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="WJ9-oK-w6x" id="QeZ-n5-3TH"/>
+                        <segue destination="BsN-fp-we6" kind="show" identifier="TeamSelectSegue" id="GKp-ez-X6D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kck-rZ-mJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1357" y="429"/>
+        </scene>
+        <!--Team Select View Controller-->
+        <scene sceneID="7cT-sP-m6o">
+            <objects>
+                <viewController id="BsN-fp-we6" customClass="TeamSelectViewController" customModule="SoccerFanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgu-kz-JIF"/>
+                        <viewControllerLayoutGuide type="bottom" id="2hB-0M-qsf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Qj-gU-XBx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngC-aZ-wAe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="응원 팀 선택" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtv-DG-rj0">
+                                        <rect key="frame" x="210" y="21" width="181" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="181" id="E3f-jM-9Xr"/>
+                                            <constraint firstAttribute="height" constant="36" id="e9N-2c-TqC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqp-7G-wny">
+                                        <rect key="frame" x="21" y="25" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="egE-H9-F6v"/>
+                                            <constraint firstAttribute="height" constant="30" id="lts-Uw-3Py"/>
+                                        </constraints>
+                                        <state key="normal" image="Back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="BsN-fp-we6" eventType="touchUpInside" id="3qa-Yb-6bp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6N-Od-YYQ">
+                                        <rect key="frame" x="533" y="25" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Hme-3m-I0H"/>
+                                            <constraint firstAttribute="height" constant="30" id="RcO-MF-KHi"/>
+                                            <constraint firstAttribute="width" constant="46" id="bTF-3p-atg"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="nzy-J1-wwk"/>
+                                            <constraint firstAttribute="width" constant="46" id="wdo-A4-dff"/>
+                                            <constraint firstAttribute="height" constant="30" id="yzA-jI-SPc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen-Bold" family="NanumBarunpen" pointSize="19"/>
+                                        <state key="normal" title="완료">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Hme-3m-I0H"/>
+                                                <exclude reference="nzy-J1-wwk"/>
+                                                <exclude reference="wdo-A4-dff"/>
+                                                <exclude reference="yzA-jI-SPc"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="confirmButtonPressed:" destination="BsN-fp-we6" eventType="touchUpInside" id="Dre-Li-zVP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44831326160000001" green="0.80022035260000002" blue="0.17137191369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="1ef-dv-aZX"/>
+                                    <constraint firstAttribute="trailing" secondItem="q6N-Od-YYQ" secondAttribute="trailing" constant="21" id="4Ij-h5-I43"/>
+                                    <constraint firstItem="mqp-7G-wny" firstAttribute="leading" secondItem="ngC-aZ-wAe" secondAttribute="leading" constant="21" id="6eG-Wx-Cfw"/>
+                                    <constraint firstItem="mqp-7G-wny" firstAttribute="top" secondItem="ngC-aZ-wAe" secondAttribute="top" constant="25" id="9hl-jq-Rbl"/>
+                                    <constraint firstItem="qtv-DG-rj0" firstAttribute="top" secondItem="ngC-aZ-wAe" secondAttribute="top" constant="21" id="OwU-iJ-Bmg"/>
+                                    <constraint firstItem="q6N-Od-YYQ" firstAttribute="top" secondItem="ngC-aZ-wAe" secondAttribute="top" constant="25" id="ZrV-e2-jUp"/>
+                                    <constraint firstItem="qtv-DG-rj0" firstAttribute="top" secondItem="ngC-aZ-wAe" secondAttribute="top" constant="21" id="alR-HW-XDh"/>
+                                    <constraint firstItem="qtv-DG-rj0" firstAttribute="centerX" secondItem="ngC-aZ-wAe" secondAttribute="centerX" id="atU-Ha-kz7"/>
+                                    <constraint firstItem="q6N-Od-YYQ" firstAttribute="top" secondItem="ngC-aZ-wAe" secondAttribute="top" constant="25" id="cLO-7k-ha5"/>
+                                    <constraint firstItem="qtv-DG-rj0" firstAttribute="centerX" secondItem="ngC-aZ-wAe" secondAttribute="centerX" id="mtN-w8-2tl"/>
+                                    <constraint firstAttribute="trailing" secondItem="q6N-Od-YYQ" secondAttribute="trailing" constant="21" id="tc5-yt-SuV"/>
+                                    <constraint firstAttribute="trailing" secondItem="q6N-Od-YYQ" secondAttribute="trailing" constant="22" id="xZg-XG-pAe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="alR-HW-XDh"/>
+                                        <exclude reference="atU-Ha-kz7"/>
+                                        <exclude reference="ZrV-e2-jUp"/>
+                                        <exclude reference="tc5-yt-SuV"/>
+                                        <exclude reference="xZg-XG-pAe"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kgm-fB-Tw1">
+                                <rect key="frame" x="0.0" y="68" width="600" height="532"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="kUd-oQ-wwf">
+                                    <rect key="frame" x="0.0" y="88" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamCell" rowHeight="60" id="tHr-bb-8rA" customClass="TeamCell" customModule="SoccerFanApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tHr-bb-8rA" id="M7h-lK-jTe">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKk-pf-xTn">
+                                                    <rect key="frame" x="33" y="14" width="202" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="G7E-I7-3Jq"/>
+                                                        <constraint firstAttribute="width" constant="202" id="VWp-0O-tw9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="SxQ-R8-EXJ">
+                                                    <rect key="frame" x="553" y="20" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="l5B-iX-Z7C"/>
+                                                        <constraint firstAttribute="width" constant="20" id="mJq-Kj-52K"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UKk-pf-xTn" firstAttribute="leading" secondItem="M7h-lK-jTe" secondAttribute="leadingMargin" constant="25" id="XeN-9R-Koz"/>
+                                                <constraint firstItem="SxQ-R8-EXJ" firstAttribute="centerY" secondItem="M7h-lK-jTe" secondAttribute="centerY" id="ms7-xJ-G3v"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SxQ-R8-EXJ" secondAttribute="trailing" constant="19" id="u6i-Z5-WXB"/>
+                                                <constraint firstItem="UKk-pf-xTn" firstAttribute="centerY" secondItem="M7h-lK-jTe" secondAttribute="centerY" id="voq-ld-lY0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkImage" destination="SxQ-R8-EXJ" id="K0N-gv-UE4"/>
+                                            <outlet property="teamLbl" destination="UKk-pf-xTn" id="J5S-3V-EZt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kgm-fB-Tw1" firstAttribute="top" secondItem="ngC-aZ-wAe" secondAttribute="bottom" id="6gv-g8-Heh"/>
+                            <constraint firstItem="ngC-aZ-wAe" firstAttribute="top" secondItem="4Qj-gU-XBx" secondAttribute="topMargin" id="QSU-et-67j"/>
+                            <constraint firstItem="Kgm-fB-Tw1" firstAttribute="leading" secondItem="4Qj-gU-XBx" secondAttribute="leadingMargin" constant="-20" id="RGt-uo-yI6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ngC-aZ-wAe" secondAttribute="trailing" constant="-20" id="d2f-Fx-nfH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kgm-fB-Tw1" secondAttribute="trailing" constant="-20" id="qz5-qC-civ"/>
+                            <constraint firstItem="2hB-0M-qsf" firstAttribute="top" secondItem="Kgm-fB-Tw1" secondAttribute="bottom" id="sUw-Ua-Oku"/>
+                            <constraint firstItem="ngC-aZ-wAe" firstAttribute="leading" secondItem="4Qj-gU-XBx" secondAttribute="leadingMargin" constant="-20" id="vhw-C2-d1s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Kgm-fB-Tw1" id="Apr-pM-Hhj"/>
+                        <segue destination="tFd-9z-nEI" kind="show" identifier="MainViewSegue" id="WHE-ND-v31"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNx-fG-tLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588" y="429"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Back" width="128" height="128"/>
         <image name="Calendar" width="24" height="24"/>
         <image name="Check" width="256" height="256"/>
+        <image name="Intro" width="600" height="150"/>
         <image name="KOR" width="640" height="427"/>
         <image name="Rank" width="32" height="32"/>
         <image name="Setting" width="32" height="32"/>

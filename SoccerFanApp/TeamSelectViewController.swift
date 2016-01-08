@@ -40,6 +40,12 @@ class TeamSelectViewController: UIViewController, UITableViewDataSource, UITable
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func confirmButtonPressed(sender: AnyObject) {
+        DataServices.ds.isFirstime = false
+        self.performSegueWithIdentifier("MainViewSegue", sender: nil)
+        
+    }
+    
     func loadSoccerTeamData() {
         
         let url: NSURL!

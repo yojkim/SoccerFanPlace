@@ -11,6 +11,22 @@ import Foundation
 class DataServices {
     static let ds = DataServices()
     
+    private var _isFirstime: Bool {
+        get {
+            var tempBool: Bool? = NSUserDefaults.standardUserDefaults().objectForKey("firstTimeUser") as? Bool
+            if tempBool == nil {
+                tempBool = true
+            }
+            
+            return tempBool!
+        }
+        
+        set(newValue) {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "firstTimeUser")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+    }
+    
     private var _supportLeague: NSString {
         get {
             var tempString: NSString? = NSUserDefaults.standardUserDefaults().objectForKey("supportLeague") as? NSString
@@ -126,6 +142,15 @@ class DataServices {
         }
     }
     
+    var isFirstime: Bool {
+        get {
+            return _isFirstime
+        }
+        set(newValue) {
+            _isFirstime = newValue
+        }
+    }
+    
     var supportLeague: NSString {
         get {
             return _supportLeague
@@ -133,7 +158,6 @@ class DataServices {
         
         set(newValue) {
             _supportLeague = newValue
-            print(supportLeague)
         }
     }
     
@@ -144,7 +168,6 @@ class DataServices {
         
         set(newValue) {
             _supportTeam = newValue
-            print(newValue)
         }
     }
     
@@ -155,7 +178,6 @@ class DataServices {
         
         set(newValue) {
             _supportTeamIndex = newValue
-            print(newValue)
         }
     }
     
@@ -166,7 +188,6 @@ class DataServices {
         
         set(newValue) {
             _supportTeamURL = newValue
-            print(supportTeamURL)
         }
     }
     
